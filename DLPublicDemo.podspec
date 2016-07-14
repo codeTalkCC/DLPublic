@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'DLPublicDemo'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of DLPublicDemo.'
+  s.summary          = 'DeLan's public components used for routine.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -21,14 +21,14 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/DLPublicDemo'
+  s.homepage         = 'http://192.168.30.20:3020/xfjiang/DLPublic'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'xfjiang' => 'xfjiang@idelan.cn' }
   s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/DLPublicDemo.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '7.0'
 
   s.source_files = 'DLPublicDemo/Classes/**/*'
   

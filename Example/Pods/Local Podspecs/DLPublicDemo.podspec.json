@@ -1,0 +1,22 @@
+{
+  "name": "DLPublicDemo",
+  "version": "0.1.0",
+  "summary": "A short description of DLPublicDemo.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/DLPublicDemo",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "xfjiang": "xfjiang@idelan.cn"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/DLPublicDemo.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "DLPublicDemo/Classes/**/*"
+}
