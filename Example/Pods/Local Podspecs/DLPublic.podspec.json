@@ -1,9 +1,9 @@
 {
   "name": "DLPublic",
   "version": "0.1.0",
-  "summary": "A short description of DLPublic.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/DLPublic",
+  "summary": "DLPublic is common components used for routine.",
+  "description": "This pulic contains iOS components used for routine.",
+  "homepage": "http://192.168.30.20:3020/xfjiang/DLPublic",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -16,7 +16,7 @@
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "7.0"
   },
   "source_files": "DLPublic/Classes/**/*"
 }

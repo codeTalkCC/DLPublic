@@ -7,7 +7,6 @@
 //
 
 #import "DLViewController.h"
-#import <DLPublic/TestClass.h>
 
 @interface DLViewController ()
 
@@ -18,6 +17,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
 	// Do any additional setup after loading the view, typically from a nib.
 }
 

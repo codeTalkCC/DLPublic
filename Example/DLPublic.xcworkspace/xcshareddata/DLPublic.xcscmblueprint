@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "B76DAB258C0B4067C2B7C012B7B8FE634ED06B16",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "D1B9932D4950088481D3E69FF7D0809BE486C6A9" : 0,
+    "B76DAB258C0B4067C2B7C012B7B8FE634ED06B16" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "F1ED3232-2732-4F35-AB9F-58FC16CF1FDE",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "D1B9932D4950088481D3E69FF7D0809BE486C6A9" : "",
+    "B76DAB258C0B4067C2B7C012B7B8FE634ED06B16" : "DLPublic\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "DLPublic",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Example\/DLPublic.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/192.168.30.20:3020\/xfjiang\/DLPublic",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B76DAB258C0B4067C2B7C012B7B8FE634ED06B16"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/192.168.30.20:3020\/xfjiang\/mdrententerprise.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D1B9932D4950088481D3E69FF7D0809BE486C6A9"
+    }
+  ]
+}
