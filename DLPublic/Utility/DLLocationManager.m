@@ -9,6 +9,8 @@
 #import "DLLocationManager.h"
 #import <CoreLocation/CoreLocation.h>
 
+#pragma clang diagnostic ignored "-Wreturn-type"
+
 @interface DLLocation : NSObject
 @property (nonatomic) NSString *province;
 @property (nonatomic) NSString *city;

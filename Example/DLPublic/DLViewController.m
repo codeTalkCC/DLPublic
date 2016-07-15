@@ -8,6 +8,8 @@
 
 #import "DLViewController.h"
 //#import <DLPublic/NSString+Public.h>
+#import <DLPublic/NSString+Public.h>
+#import <DLPublic/DLLocationManager.h>
 
 @interface DLViewController ()
 

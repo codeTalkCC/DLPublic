@@ -76,14 +76,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (BOOL)containsString:(NSString *)string;
 
 /**
- Returns YES if the target string is contained within the receiver.
- @param string A string to test the the receiver.
- 
- @discussion Apple has implemented this method in iOS8.
- */
-- (BOOL)containsString:(NSString *)string;
-
-/**
  Try to parse this string and returns an `NSNumber`.
  @return Returns an `NSNumber` if parse succeed, or nil if an error occurs.
  */

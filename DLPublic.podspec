@@ -4,7 +4,8 @@
 #
 # Any lines starting with a # are optional, but their use is encouraged
 # To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
-#
+# pod lib lint DLPublic.podspec
+# pod repo push PodSpecs DLPublic.podspec
 
 Pod::Spec.new do |s|
   s.name             = 'DLPublic'
