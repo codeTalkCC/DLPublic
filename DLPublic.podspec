@@ -30,13 +30,13 @@ This pulic contains iOS components used for routine.
 
   s.ios.deployment_target = '7.0'
 
-  s.source_files = 'DLPublic/Classes/**/*'
+  s.source_files = 'DLPublic/Base/**/*', 'DLPublic/Utility/**/*', 'DLPublic/Resource/**/*'
   
   # s.resource_bundles = {
   #   'DLPublic' => ['DLPublic/Assets/*.png']
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
+  # s.frameworks = 'UIKit', 'CoreLocation'
   # s.dependency 'AFNetworking', '~> 2.3'
 end
