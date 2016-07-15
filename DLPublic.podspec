@@ -25,7 +25,7 @@ This pulic contains iOS components used for routine.
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'xfjiang' => 'xfjiang@idelan.cn' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/DLPublic.git', :tag => s.version.to_s }
+  s.source           = { :git => 'http://192.168.30.20:3020/xfjiang/DLPublic', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '7.0'

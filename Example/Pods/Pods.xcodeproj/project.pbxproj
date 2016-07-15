@@ -8,10 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		04A35C4A3971D9C4EEA43BAC83326DAF /* UIDevice+Public.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECDE32520FD1903F7B38E3DD22154F0 /* UIDevice+Public.m */; };
-		0506AA330C9F3D6DB7EBC85F925367D0 /* errorCode_en.xml in Sources */ = {isa = PBXBuildFile; fileRef = 019559248634CA7D079E997E77882D96 /* errorCode_en.xml */; };
 		159E3273AD48F1FC40D4798A03D49751 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		1BBFD76D8012ABD2832C201529461618 /* DLKeyboardManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 382AC050EBDC9BECC1E9C72B8486945A /* DLKeyboardManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		23663771EBE4B659E808ABC7C2A6F8ED /* errorCode_cn.xml in Sources */ = {isa = PBXBuildFile; fileRef = 36B375446CCF33D1AB6EF896A79A5E88 /* errorCode_cn.xml */; };
 		306570FEDB702480AD8685E9F8AC6791 /* UIApplication+Public.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FD5EA67733428958951AB3F1DDE2F4B /* UIApplication+Public.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3C60EAA488B14392A40A5C1A3D065A50 /* UIApplication+Public.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD97B6BCE8CEDA3613A8208BB519AF5 /* UIApplication+Public.m */; };
 		406BA5F2F7BF7219A2D5406E217FDC19 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
@@ -480,8 +478,6 @@
 				BAA9F5E9D00E403B55AFC0C85FFD014F /* DLErrorParser.m in Sources */,
 				DDB322961A73A8BC0157BDA2D5E7F717 /* DLKeyboardManager.m in Sources */,
 				A8084486DC9061D1C97AF7D946E17F74 /* DLPublic-dummy.m in Sources */,
-				23663771EBE4B659E808ABC7C2A6F8ED /* errorCode_cn.xml in Sources */,
-				0506AA330C9F3D6DB7EBC85F925367D0 /* errorCode_en.xml in Sources */,
 				B794A4C84F5DE5F705E5A54592720D13 /* NSDictionary+Public.m in Sources */,
 				4FCAB0313392CCF335E07CAFC4DE4D57 /* NSString+Public.m in Sources */,
 				3C60EAA488B14392A40A5C1A3D065A50 /* UIApplication+Public.m in Sources */,
