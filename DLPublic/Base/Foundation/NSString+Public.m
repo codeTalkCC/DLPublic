@@ -124,7 +124,7 @@
     NSString *str = [self lowercaseString];
     NSArray *prefixs = @[@"http://", @"https://"];
     for (NSString *pre in prefixs) {
-        if ([self hasPrefix:pre]) {
+        if ([str hasPrefix:pre]) {
             return YES;
         }
     }

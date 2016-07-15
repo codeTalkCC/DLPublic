@@ -37,7 +37,7 @@
 
 typedef void (^DLLocationInfoBlock)(DLLocation *location, NSError *error);
 
-@interface DLLocationManager()
+@interface DLLocationManager()<CLLocationManagerDelegate>
 @property (nonatomic, copy) DLLocationInfoBlock infoBlock;
 @end
 
