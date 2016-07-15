@@ -21,11 +21,11 @@
     for (NSDictionary *itemDict in errDictArray) {
         NSString *code = itemDict[@"code"];
         if (code.integerValue == errCode) {
-            return [NSString stringWithFormat:@"%@[%ld]", itemDict[@"text"], errCode];
+            return [NSString stringWithFormat:@"%@[%ld]", itemDict[@"text"], (long)errCode];
         }
     }
     NSString *unknow = chinese ? @"未知错误" : @"Unknow Error";
-    return [NSString stringWithFormat:@"%@[%ld]", unknow, errCode];
+    return [NSString stringWithFormat:@"%@[%ld]", unknow, (long)errCode];
 }
 
 /**
