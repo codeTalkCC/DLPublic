@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "DLPublicMacro.h"
-#import "DLKeyboardManager.h"
 
 
 @interface DLBaseViewController : UIViewController

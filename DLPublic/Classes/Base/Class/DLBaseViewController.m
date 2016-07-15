@@ -92,6 +92,7 @@
     [self.view endEditing:YES];
 }
 
+#if 0
 #pragma mark @protocol DLKeyboardObserver
 
 - (void)keyboardChangedWithTransition:(DLKeyboardTransition)transition {
@@ -120,4 +121,6 @@
         } completion:nil];
     }
 }
+#endif
+
 @end
