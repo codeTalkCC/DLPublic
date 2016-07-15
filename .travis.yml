@@ -10,5 +10,9 @@ language: objective-c
 # - gem install cocoapods # Since Travis is not always on latest version
 # - pod install --project-directory=Example
 script:
+<<<<<<< HEAD
 - set -o pipefail && xcodebuild test -workspace Example/DLPublic.xcworkspace -scheme DLPublic-Example -sdk iphonesimulator9.3 ONLY_ACTIVE_ARCH=NO | xcpretty
+=======
+- set -o pipefail && xcodebuild test -workspace Example/DLPublicDemo.xcworkspace -scheme DLPublicDemo-Example -sdk iphonesimulator9.3 ONLY_ACTIVE_ARCH=NO | xcpretty
+>>>>>>> a7de4ea27f30608bb88d3412f3e41f49d6ad14bb
 - pod lib lint
