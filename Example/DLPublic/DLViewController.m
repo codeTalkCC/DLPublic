@@ -7,6 +7,7 @@
 //
 
 #import "DLViewController.h"
+//#import <DLPublic/NSString+Public.h>
 
 @interface DLViewController ()
 
@@ -17,7 +18,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+//    NSString *str = nil;
+//    NSNumber *n = [str numberValue];
+//    BOOL empty = [str isNotEmpty];
+//    
+//    NSLog(@"");
+//    
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
