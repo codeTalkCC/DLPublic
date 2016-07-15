@@ -7,6 +7,7 @@
 //
 
 #import "DLViewController.h"
+#import <DLPublic/TestClass.h>
 
 @interface DLViewController ()
 

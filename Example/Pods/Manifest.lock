@@ -1,0 +1,16 @@
+PODS:
+  - DLPublic (0.1.0)
+
+DEPENDENCIES:
+  - DLPublic (from `../`)
+
+EXTERNAL SOURCES:
+  DLPublic:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  DLPublic: ccbc33fe711fb67585d96c91e9dfed9cc108f257
+
+PODFILE CHECKSUM: c9150bebde9d1d02e6ff2e77a31983bc58cbc4a6
+
+COCOAPODS: 1.0.1
