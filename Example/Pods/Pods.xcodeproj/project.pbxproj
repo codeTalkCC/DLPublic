@@ -54,7 +54,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		019559248634CA7D079E997E77882D96 /* errorCode_en.xml */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; path = errorCode_en.xml; sourceTree = "<group>"; };
 		1348DC2BAF4307AE98CD76FB16E26BCB /* Pods-DLPublic_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DLPublic_Tests-resources.sh"; sourceTree = "<group>"; };
 		1DAAEB36FEB78D972FD5C000D6F485FB /* Pods-DLPublic_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-DLPublic_Example.modulemap"; sourceTree = "<group>"; };
 		22B3A6722586C7D8B68D79F6EE5233EF /* UIImage+Public.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+Public.h"; sourceTree = "<group>"; };
@@ -66,7 +65,6 @@
 		33B7BF6266EF375342172DD93C459AA2 /* UIResponder+Public.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIResponder+Public.h"; sourceTree = "<group>"; };
 		341D0898820C80698EDFBD966BE22272 /* Pods-DLPublic_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DLPublic_Example-dummy.m"; sourceTree = "<group>"; };
 		3567A5B9AC5D7A1AD014E9F76216E3E3 /* UIView+Public.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+Public.m"; sourceTree = "<group>"; };
-		36B375446CCF33D1AB6EF896A79A5E88 /* errorCode_cn.xml */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; path = errorCode_cn.xml; sourceTree = "<group>"; };
 		382AC050EBDC9BECC1E9C72B8486945A /* DLKeyboardManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DLKeyboardManager.h; sourceTree = "<group>"; };
 		38E765074D845D02961943A254DBD87C /* DLBaseViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DLBaseViewController.m; sourceTree = "<group>"; };
 		3BD4C2D07447351C28EC9DDCC81B41BA /* DLKeyboardManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DLKeyboardManager.m; sourceTree = "<group>"; };
@@ -218,15 +216,6 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		43BE829DC3CDDFBA81A8DF7CE5C977DF /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-				36B375446CCF33D1AB6EF896A79A5E88 /* errorCode_cn.xml */,
-				019559248634CA7D079E997E77882D96 /* errorCode_en.xml */,
-			);
-			path = Resource;
-			sourceTree = "<group>";
-		};
 		5D9821D6B119A3570876604559FE919B /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,7 +234,6 @@
 			isa = PBXGroup;
 			children = (
 				1AE07A0FDF9422380572449883E38EC1 /* Base */,
-				43BE829DC3CDDFBA81A8DF7CE5C977DF /* Resource */,
 				FB3F42CA71DAB6564B248FCE87A351E0 /* Utility */,
 			);
 			path = Classes;
