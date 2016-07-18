@@ -108,4 +108,51 @@
     return [self isAppExtension] ? nil : [UIApplication performSelector:@selector(sharedApplication)]; /*MetaClass instance*/
 #pragma clang diagnostic pop
 }
+
++ (void)openURLScheme:(NSString *)URL {
+    NSURL *localURL = [NSURL URLWithString:URL];
+    if ([[self sharedApplication] canOpenURL:localURL]) {
+        [[self sharedApplication] openURL:localURL];
+    }
+}
+
++ (void)checkToUpdateAppVersionWithAppleID:(NSString *)appleID checkResult:(void (^)(NSString *newVersion, NSError *error))block {
+    NSString *itunesURL = [NSString stringWithFormat:@"http://itunes.apple.com/lookup?id=%@", appleID];
+    NSURL *url = [NSURL URLWithString:itunesURL];
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData *_Nullable data, NSURLResponse *_Nullable response, NSError *_Nullable error) {
+        
+        if (data == nil && error) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+               if (block) block(nil, error);
+            });
+            return;
+        }
+        
+        NSDictionary *resultDict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+        if (resultDict && [resultDict[@"results"] isKindOfClass:[NSArray class]]) {
+            NSArray *resultArray = (NSArray *)resultDict[@"results"];
+            if (resultArray.count > 0) {
+                NSDictionary *result = resultArray[0];
+                NSString *remoteVersion = result[@"version"];
+                NSString *localVersion = [[self sharedExtensionApplication] appVersion];
+                if ([remoteVersion compare:localVersion options:NSNumericSearch] == NSOrderedDescending) {
+//                    NSString *appUrl = result[@"trackViewUrl"];
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        if (block) block(remoteVersion, nil);
+                    });
+                }
+                else {
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        if (block) block(nil, nil);
+                    });
+                }
+            }
+        }
+    }];
+    
+    [task resume];
+}
+
 @end

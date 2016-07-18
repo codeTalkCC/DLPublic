@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DLPublicMacro.h"
 
+#if __has_include(<DLPublic/Public.h>)
+#import <DLPublic/DLPublicMacro.h>
+#else
+#import "DLPublicMacro.h"
+#endif
 
 @interface DLBaseViewController : UIViewController
 

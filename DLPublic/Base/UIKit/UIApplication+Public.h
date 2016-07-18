@@ -56,6 +56,16 @@ NS_ASSUME_NONNULL_BEGIN
 /// Same as sharedApplication, but returns nil in App Extension.
 + (nullable UIApplication *)sharedExtensionApplication;
 
+/// Opens URL scheme. e.g. Open WI-FI (prefs:root=WIFI)
++ (void)openURLScheme:(NSString *)URL;
+
+/**
+ Checks This app Whether have new version in App Store.
+ 
+ @param appleID   Apple ID on itunesconnect.apple.com/App Infomation e.g. 919366201
+ @param block     A block contains two arguments. If don't have new verion or error `newVersion` and `error` will both be nil.
+ */
++ (void)checkToUpdateAppVersionWithAppleID:(NSString *)appleID checkResult:(void (^)(NSString *newVersion, NSError *error))block ;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface UIResponder (Public)
 
 /**
@@ -16,3 +18,5 @@
 - (id)currentFirstResponder;
 
 @end
+
+NS_ASSUME_NONNULL_END

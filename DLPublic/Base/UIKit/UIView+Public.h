@@ -8,7 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface UIView (Public)
+
+/**
+ Create a snapshot image of the complete view hierarchy.
+ */
+- (nullable UIImage *)snapshotImage;
 
 @property (nonatomic) CGFloat left;        ///< Shortcut for frame.origin.x.
 @property (nonatomic) CGFloat top;         ///< Shortcut for frame.origin.y
@@ -22,3 +29,5 @@
 @property (nonatomic) CGSize  size;        ///< Shortcut for frame.size.
 
 @end
+
+NS_ASSUME_NONNULL_END

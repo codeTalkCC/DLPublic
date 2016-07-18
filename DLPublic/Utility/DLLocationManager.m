@@ -9,8 +9,6 @@
 #import "DLLocationManager.h"
 #import <CoreLocation/CoreLocation.h>
 
-#pragma clang diagnostic ignored "-Wreturn-type"
-
 @interface DLLocation : NSObject
 @property (nonatomic) NSString *province;
 @property (nonatomic) NSString *city;
@@ -59,6 +57,7 @@ typedef void (^DLLocationInfoBlock)(DLLocation *location, NSError *error);
     if ([[UIDevice currentDevice] systemVersion].doubleValue >= 8) {
         [_locationManager requestWhenInUseAuthorization];
     }
+    return self;
 }
 
 + (instancetype)defaultManager {

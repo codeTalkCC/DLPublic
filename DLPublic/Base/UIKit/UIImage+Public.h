@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIImage (Public)
-
 NS_ASSUME_NONNULL_BEGIN
+
+@interface UIImage (Public)
 
 /**
  *  Create and return a 1x1 point size image with the given color.
