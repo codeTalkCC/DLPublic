@@ -11,7 +11,6 @@
 #if __has_include(<DLPublic/Public.h>)
 
 #import <DLPublic/DLPublicMacro.h>
-#import <DLPublic/DLBaseViewController.h>
 
 #import <DLPublic/NSData+Public.h>
 #import <DLPublic/NSDate+Public.h>
@@ -36,7 +35,6 @@
 #else
 
 #import "DLPublicMacro.h"
-#import "DLBaseViewController.h"
 
 #import "NSData+Public.h"
 #import "NSNumber+Public.h"

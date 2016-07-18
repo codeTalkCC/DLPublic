@@ -23,5 +23,10 @@
     "DLPublic/Utility/**/*",
     "DLPublic/Resource/**/*",
     "DLPublic/**"
-  ]
+  ],
+  "resource_bundles": {
+    "DLPublic": [
+      "DLPublic/Assets/*.xml"
+    ]
+  }
 }

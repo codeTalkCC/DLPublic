@@ -1,4 +1,4 @@
-platform: ios, '7.0'
+platform :ios, '7.0'
 use_frameworks!
 
 target 'DLPublic_Example' do
