@@ -24,11 +24,9 @@
 		5DDC661EABEE3CA86999096532DC6F38 /* NSString+Public.h in Headers */ = {isa = PBXBuildFile; fileRef = 620940A2F09F2D734B335C4D437BF591 /* NSString+Public.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6091FF8CAE9C8C15702D29D6CA5AFEBC /* UIImage+Public.h in Headers */ = {isa = PBXBuildFile; fileRef = E050456E56CA4D273C295A904270FF8C /* UIImage+Public.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6570D8E04F2E6A4AF02593C9C00F4488 /* NSDictionary+Public.h in Headers */ = {isa = PBXBuildFile; fileRef = 61E29E628BE2183FE009E3318CA8EA07 /* NSDictionary+Public.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6761072F0FD3F34DDF14662DBF9E6B73 /* errorCode_cn.xml in Sources */ = {isa = PBXBuildFile; fileRef = ABEA7DA241A6DA569435F9C040CB62A5 /* errorCode_cn.xml */; };
 		6D446E4253A5A86235AB67018C2280FA /* NSDate+Public.h in Headers */ = {isa = PBXBuildFile; fileRef = 07D81186BACA702666230FB04125CB8F /* NSDate+Public.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74B41C66889A3A8F0B0BC37035D7C670 /* UIApplication+Public.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC3D527A160BD3E8B67439BF7374B50 /* UIApplication+Public.m */; };
 		7535BC62123BF6CD595C20E8B3233CDF /* Pods-DLPublic_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 341D0898820C80698EDFBD966BE22272 /* Pods-DLPublic_Example-dummy.m */; };
-		78FFBB99A2A98B0B4969D59629889736 /* errorCode_en.xml in Sources */ = {isa = PBXBuildFile; fileRef = C4B31F7A692A9627F1B9A215E82143A9 /* errorCode_en.xml */; };
 		7C65F0E5E2267AF9D9AC1F7B5F1371AE /* UIResponder+Public.h in Headers */ = {isa = PBXBuildFile; fileRef = BE03AD79161112CA7F3BFCDA8CE1EEC4 /* UIResponder+Public.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		83162E49AA3A35476CBA2ED950A44F3A /* DLBaseViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F2377B006A03A5BD67F4E4B6ECBFB1D9 /* DLBaseViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		834307203DF98435B609FB641317F372 /* NSString+Public.m in Sources */ = {isa = PBXBuildFile; fileRef = BFCD405F84348B0F583535D8F01BF8FE /* NSString+Public.m */; };
@@ -112,7 +110,6 @@
 		9433C38D1094033C1FB993FCBB6F29E3 /* Pods-DLPublic_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DLPublic_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		989A7D8CD2121EFE156456A40FEB7FAB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		998F9ED87AB7EB8C9B5F426385BF22B8 /* Pods-DLPublic_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DLPublic_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		ABEA7DA241A6DA569435F9C040CB62A5 /* errorCode_cn.xml */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; path = errorCode_cn.xml; sourceTree = "<group>"; };
 		AC4F9D477001ED1EE2EFC05DD4585988 /* Pods-DLPublic_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DLPublic_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		B04BFEA8BBBEA7F1D42E17CF42D683E7 /* DLLocationManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DLLocationManager.m; sourceTree = "<group>"; };
 		B2D18CB8655284DD9FA90B5B48FDFD6D /* NSDate+Public.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Public.m"; sourceTree = "<group>"; };
@@ -123,7 +120,6 @@
 		C01743448A2A7A5ADA66A348B1B15773 /* Pods-DLPublic_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-DLPublic_Tests.modulemap"; sourceTree = "<group>"; };
 		C202AEB61CF7A9AB3FFE58A8ACC77968 /* Pods_DLPublic_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DLPublic_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C216075BBA03E8BC4AE5072227C541C1 /* UIDevice+Public.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Public.m"; sourceTree = "<group>"; };
-		C4B31F7A692A9627F1B9A215E82143A9 /* errorCode_en.xml */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; path = errorCode_en.xml; sourceTree = "<group>"; };
 		CD3263FBDB10E185F19044BEB258B14C /* UIControl+Public.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIControl+Public.m"; sourceTree = "<group>"; };
 		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		D69746653BBDFCC6CE621649A883DAE4 /* DLKeyboardManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DLKeyboardManager.h; sourceTree = "<group>"; };
@@ -138,6 +134,9 @@
 		F2377B006A03A5BD67F4E4B6ECBFB1D9 /* DLBaseViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DLBaseViewController.h; sourceTree = "<group>"; };
 		F27E5DF3D54B6A95D3AC073BD961514E /* DLPublic-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DLPublic-prefix.pch"; sourceTree = "<group>"; };
 		F4CB4137CDE77AFE88AB8803868BBD2A /* DLPublic.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DLPublic.xcconfig; sourceTree = "<group>"; };
+		FE695EEB1D3CADF10040A18B /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		FE695EEC1D3CAE000040A18B /* errorCode_cn.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = errorCode_cn.xml; sourceTree = "<group>"; };
+		FE695EED1D3CAE000040A18B /* errorCode_en.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = errorCode_en.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,15 +246,6 @@
 				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
 			);
 			name = iOS;
-			sourceTree = "<group>";
-		};
-		7167C0DEB0FD66219045DACA8E6D65E2 /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-				ABEA7DA241A6DA569435F9C040CB62A5 /* errorCode_cn.xml */,
-				C4B31F7A692A9627F1B9A215E82143A9 /* errorCode_en.xml */,
-			);
-			path = Resource;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -369,11 +359,21 @@
 			isa = PBXGroup;
 			children = (
 				871FD5234C3C73B872FE1D352FFE8682 /* DLPublic.h */,
+				FE695EEA1D3CADF10040A18B /* Assets */,
 				E361A86682ABFF5827998D2B629D018D /* Base */,
-				7167C0DEB0FD66219045DACA8E6D65E2 /* Resource */,
 				3C79C34FA098D5AC1B826A3E7DCA4265 /* Utility */,
 			);
 			path = DLPublic;
+			sourceTree = "<group>";
+		};
+		FE695EEA1D3CADF10040A18B /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				FE695EEC1D3CAE000040A18B /* errorCode_cn.xml */,
+				FE695EED1D3CAE000040A18B /* errorCode_en.xml */,
+				FE695EEB1D3CADF10040A18B /* .gitkeep */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -524,8 +524,6 @@
 				3001EE837B1760E3E8A1FCE734497E56 /* DLKeyboardManager.m in Sources */,
 				A1AF820D3BB3FFF1EA4FE6DE1735D337 /* DLLocationManager.m in Sources */,
 				CC77BAE1F9E8A6CEFB7233DBBFAE608E /* DLPublic-dummy.m in Sources */,
-				6761072F0FD3F34DDF14662DBF9E6B73 /* errorCode_cn.xml in Sources */,
-				78FFBB99A2A98B0B4969D59629889736 /* errorCode_en.xml in Sources */,
 				35B48E03C57DD4BD0C04274E30C8EBEE /* NSData+Public.m in Sources */,
 				88876D4A7BE7F13C4FB962B704E34701 /* NSDate+Public.m in Sources */,
 				FBF8E798350B058FB5A3326BB46ED715 /* NSDictionary+Public.m in Sources */,

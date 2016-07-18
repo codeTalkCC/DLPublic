@@ -33,9 +33,9 @@ This pulic contains iOS components used for routine.
 
   s.source_files = 'DLPublic/Base/**/*', 'DLPublic/Utility/**/*', 'DLPublic/Resource/**/*', 'DLPublic/**'
   
-  # s.resource_bundles = {
-  #   'DLPublic' => ['DLPublic/Assets/*.png']
-  # }
+   s.resource_bundles = {
+     'DLPublic' => ['DLPublic/Assets/*.xml']
+   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'CoreLocation'
