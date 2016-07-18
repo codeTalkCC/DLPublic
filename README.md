@@ -22,20 +22,23 @@ pod "DLPublic"
 
 ## DLPublic
 
-DLPublic.h: 引入头文件
+DLPublic.h: 头文件
 
 #### Base
 
-DLPublicMacro.h: 通用宏定义
+**DLPublicMacro.h:** Common Macro File
 
-Class: 基类文件
+**Class:** Base Class
 
-Foundation: Foundation Category
+**Foundation:** Foundation Category
 
-UIKIt: UIKit Category
+**UIKIt:** UIKit Category
 
 #### Utility
 
+`DLErrorParser`: 错误码解析类
+`DLKeyboardManager`: 键盘管理
+`DLLocationManager`: 定位管理
 
 
 ## Author
