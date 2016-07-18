@@ -31,7 +31,7 @@ This pulic contains iOS components used for routine.
 
   s.ios.deployment_target = '7.0'
 
-  s.source_files = 'DLPublic/Base/**/*', 'DLPublic/Utility/**/*', 'DLPublic/Resource/**/*'
+  s.source_files = 'DLPublic/Base/**/*', 'DLPublic/Utility/**/*', 'DLPublic/Resource/**/*', 'DLPublic/**'
   
   # s.resource_bundles = {
   #   'DLPublic' => ['DLPublic/Assets/*.png']
