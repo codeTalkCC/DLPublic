@@ -17,33 +17,46 @@ DLPublic is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "DLPublic"
+pod "DLPublic", :git => 'http://192.168.30.20:3020/xfjiang/DLPublic.git'
+```
+e.g.
+
+```ruby
+source 'http://192.168.30.20:3020/xfjiang/DLPublic'
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '7.0'
+def pods
+pod 'DLPublic', :git => 'http://192.168.30.20:3020/xfjiang/DLPublic.git'
+pod 'MBProgressHUD'
+end
+
+target 'AlerViewControllerTest' do
+pods
+end
 ```
 
 ## DLPublic
 
-DLPublic.h: 头文件
+`DLPublic.h`: Header
 
 #### Base
 
-**DLPublicMacro.h:** Common Macro File
+*DLPublicMacro.h:* Common Macro File
 
-**Class:** Base Class
+*Class:* Base Class
 
-**Foundation:** Foundation Category
+*Foundation:* Foundation Category
 
-**UIKIt:** UIKit Category
+*UIKit:* UIKit Category
 
 #### Utility
 
 `DLErrorParser`: 错误码解析类
+
 `DLKeyboardManager`: 键盘管理
+
 `DLLocationManager`: 定位管理
-
-
-## Author
-
-xfjiang, xfjiang@idelan.cn
 
 ## License
 
