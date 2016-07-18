@@ -16,7 +16,7 @@
     "tag": "0.1.4"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "7.0"
   },
   "source_files": [
     "DLPublic/Base/**/*",

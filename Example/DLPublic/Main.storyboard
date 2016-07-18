@@ -18,10 +18,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HAa-Rh-k7E">
-                                <rect key="frame" x="275" y="285" width="50" height="30"/>
-                                <state key="normal" title="To Test"/>
+                                <rect key="frame" x="262" y="285" width="76" height="30"/>
+                                <state key="normal" title="Show Error"/>
                                 <connections>
-                                    <segue destination="4ZR-jQ-dfw" kind="show" id="WpG-85-xsC"/>
+                                    <action selector="showError:" destination="whP-gf-Uak" eventType="touchUpInside" id="vOB-mY-yUI"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -36,37 +36,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="851" y="449"/>
-        </scene>
-        <!--Test View Controller-->
-        <scene sceneID="NYQ-KQ-eET">
-            <objects>
-                <viewController id="4ZR-jQ-dfw" customClass="DLTestViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="MSq-ym-ALr"/>
-                        <viewControllerLayoutGuide type="bottom" id="ZMc-yJ-Eas"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="lfw-HE-TQV">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JeR-5r-DZ1">
-                                <rect key="frame" x="281" y="285" width="38" height="30"/>
-                                <state key="normal" title="Show"/>
-                                <connections>
-                                    <action selector="sho:" destination="4ZR-jQ-dfw" eventType="touchUpInside" id="tKW-d2-RnO"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="JeR-5r-DZ1" firstAttribute="centerX" secondItem="lfw-HE-TQV" secondAttribute="centerX" id="2zu-j1-VaX"/>
-                            <constraint firstItem="JeR-5r-DZ1" firstAttribute="centerY" secondItem="lfw-HE-TQV" secondAttribute="centerY" id="M7S-3K-SFV"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jJx-ld-Ukc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1541" y="449"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="peO-cj-qHl">

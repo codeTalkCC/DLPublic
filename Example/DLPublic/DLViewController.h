@@ -6,8 +6,8 @@
 //  Copyright (c) 2016 HangZhou DeLan Technology Co. All rights reserved.
 //
 
-@import UIKit;
+#import <DLPublic/DLBaseViewController.h>
 
-@interface DLViewController : UIViewController
+@interface DLViewController : DLBaseViewController
 
 @end

@@ -23,9 +23,6 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
-		FE3AD05D1D3CC415009A103A /* errorCode_cn.xml in Resources */ = {isa = PBXBuildFile; fileRef = FE3AD05B1D3CC415009A103A /* errorCode_cn.xml */; };
-		FE3AD05E1D3CC415009A103A /* errorCode_en.xml in Resources */ = {isa = PBXBuildFile; fileRef = FE3AD05C1D3CC415009A103A /* errorCode_en.xml */; };
-		FE695EDF1D3C5C6F0040A18B /* DLTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE695EDE1D3C5C6F0040A18B /* DLTestViewController.m */; };
 		FEAAED611D38E4EF00B0C64D /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEAAED601D38E4EF00B0C64D /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -69,10 +66,6 @@
 		F202BBE773027D2022F10CE3 /* Pods_DLPublic_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DLPublic_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2F160B042AEEBDFD9CEF43F /* Pods-DLPublic_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DLPublic_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DLPublic_Tests/Pods-DLPublic_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		F32A75746C753DAF78C70909 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		FE3AD05B1D3CC415009A103A /* errorCode_cn.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = errorCode_cn.xml; sourceTree = "<group>"; };
-		FE3AD05C1D3CC415009A103A /* errorCode_en.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = errorCode_en.xml; sourceTree = "<group>"; };
-		FE695EDD1D3C5C6F0040A18B /* DLTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLTestViewController.h; sourceTree = "<group>"; };
-		FE695EDE1D3C5C6F0040A18B /* DLTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLTestViewController.m; sourceTree = "<group>"; };
 		FEAAED601D38E4EF00B0C64D /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,14 +132,10 @@
 		6003F593195388D20070C39A /* Example for DLPublic */ = {
 			isa = PBXGroup;
 			children = (
-				FE3AD05B1D3CC415009A103A /* errorCode_cn.xml */,
-				FE3AD05C1D3CC415009A103A /* errorCode_en.xml */,
 				6003F59C195388D20070C39A /* DLAppDelegate.h */,
 				6003F59D195388D20070C39A /* DLAppDelegate.m */,
 				6003F5A5195388D20070C39A /* DLViewController.h */,
 				6003F5A6195388D20070C39A /* DLViewController.m */,
-				FE695EDD1D3C5C6F0040A18B /* DLTestViewController.h */,
-				FE695EDE1D3C5C6F0040A18B /* DLTestViewController.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -292,8 +281,6 @@
 			files = (
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
-				FE3AD05E1D3CC415009A103A /* errorCode_en.xml in Resources */,
-				FE3AD05D1D3CC415009A103A /* errorCode_cn.xml in Resources */,
 				FEAAED611D38E4EF00B0C64D /* Launch Screen.storyboard in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
@@ -407,7 +394,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE695EDF1D3C5C6F0040A18B /* DLTestViewController.m in Sources */,
 				6003F59E195388D20070C39A /* DLAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* DLViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
