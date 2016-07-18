@@ -3,6 +3,7 @@
 #import "DLBaseViewController.h"
 #import "DLPublicMacro.h"
 #import "NSData+Public.h"
+#import "NSDate+Public.h"
 #import "NSDictionary+Public.h"
 #import "NSNumber+Public.h"
 #import "NSString+Public.h"
@@ -18,6 +19,7 @@
 #import "DLKeyboardManager.h"
 #import "DLLocationManager.h"
 #import "DLSingleton.h"
+#import "DLPublic.h"
 
 FOUNDATION_EXPORT double DLPublicVersionNumber;
 FOUNDATION_EXPORT const unsigned char DLPublicVersionString[];

@@ -3,13 +3,12 @@
 //  DLPublic
 //
 //  Created by xfjiang on 07/15/2016.
-//  Copyright (c) 2016 xfjiang. All rights reserved.
+//  Copyright (c) 2016 HangZhou DeLan Technology Co. All rights reserved.
 //
 
 #import "DLViewController.h"
-//#import <DLPublic/NSString+Public.h>
-#import <DLPublic/NSString+Public.h>
-#import <DLPublic/DLLocationManager.h>
+#import <DLPublic/DLPublic.h>
+#import <DLPublic/NSDate+Public.h>
 
 @interface DLViewController ()
 
@@ -20,13 +19,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-//    NSString *str = nil;
-//    NSNumber *n = [str numberValue];
-//    BOOL empty = [str isNotEmpty];
-//    
-//    NSLog(@"");
-//    
-	// Do any additional setup after loading the view, typically from a nib.
+    NSDate *yestoday = [NSDate dateWithTimeIntervalSinceNow:1 * 60*60*24];
+    BOOL he = [yestoday isYesterday];
+    NSLog(@"");
+    
 }
 
 - (void)didReceiveMemoryWarning
