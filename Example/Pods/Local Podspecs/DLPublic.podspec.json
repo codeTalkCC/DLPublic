@@ -1,6 +1,6 @@
 {
   "name": "DLPublic",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "summary": "DLPublic is common components used for routine.",
   "description": "This pulic contains iOS components used for routine.",
   "homepage": "http://192.168.30.20:3020/xfjiang/DLPublic",
@@ -13,20 +13,19 @@
   },
   "source": {
     "git": "http://192.168.30.20:3020/xfjiang/DLPublic.git",
-    "tag": "0.1.3"
+    "tag": "0.1.4"
   },
   "platforms": {
-    "ios": "7.0"
+    "ios": "8.0"
   },
   "source_files": [
     "DLPublic/Base/**/*",
     "DLPublic/Utility/**/*",
-    "DLPublic/Resource/**/*",
     "DLPublic/**"
   ],
   "resource_bundles": {
     "DLPublic": [
-      "DLPublic/Assets/*.xml"
+      "DLPublic/Assets/*"
     ]
   }
 }

@@ -20,6 +20,19 @@ it, simply add the following line to your Podfile:
 pod "DLPublic"
 ```
 
+## DLPublic
+
+DLPublic.h: 引入头文件
+####Base
+DLPublicMacro.h: 通用宏定义
+Class: 基类文件
+Foundation: Foundation Category
+UIKIt: UIKit Category
+
+#### Utility
+
+
+
 ## Author
 
 xfjiang, xfjiang@idelan.cn

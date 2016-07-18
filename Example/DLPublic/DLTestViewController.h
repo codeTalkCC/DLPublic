@@ -7,6 +7,7 @@
 //
 
 #import <DLPublic/DLPublic.h>
+#import <DLPublic/DLBaseViewController.h>
 
 @interface DLTestViewController : DLBaseViewController
 
