@@ -2,8 +2,8 @@
 //  NSDate+Public.h
 //  Pods
 //
-//  Created by Jone on 16/7/18.
-//
+//  Created by DeLan on 16/7/14.
+//  Copyright © 2016年 HangZhou DeLan Technology Co.. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
