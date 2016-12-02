@@ -6,6 +6,7 @@
 //  Copyright © 2016年 HangZhou DeLan Technology Co. All rights reserved.
 //
 
+#ifdef __OBJC__
 
 #import <pthread.h>
 
@@ -102,3 +103,5 @@ static inline void dispatch_sync_on_main_queue(void (^block)()) {
 }
 
 #endif /* DLPublicMacro_h */
+
+#endif

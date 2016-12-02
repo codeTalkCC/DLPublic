@@ -6,6 +6,9 @@
 //  Copyright © 2016年 HangZhou DeLan Technology Co. All rights reserved.
 //
 
+
+#ifdef __OBJC__
+
 #import <Foundation/Foundation.h>
 
 #if __has_include(<DLPublic/Public.h>)
@@ -55,4 +58,5 @@
 #import "DLKeyboardManager.h"
 #import "DLLocationManager.h"
 
+#endif
 #endif

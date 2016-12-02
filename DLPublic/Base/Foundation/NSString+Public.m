@@ -50,6 +50,12 @@
     }
 }
 
+- (BOOL)containsSpecialCharacter {
+    NSString *specialRegix = @"^[A-Za-z0-9]{0,}$";
+    NSPredicate *specialTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", specialRegix];
+    return [specialTest evaluateWithObject:self];
+}
+
 - (BOOL)stringIsPhoneNumber {
     /**
      * 手机号码
