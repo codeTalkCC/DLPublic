@@ -29,7 +29,7 @@ This pulic contains iOS components used for routine.
   s.source           = { :git => 'http://192.168.30.20:3020/xfjiang/DLPublic.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '7.0'
+  s.ios.deployment_target = '8.0'
 
   s.source_files = 'DLPublic/Base/**/*', 'DLPublic/Utility/**/*', 'DLPublic/**'
   

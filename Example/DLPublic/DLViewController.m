@@ -7,6 +7,8 @@
 //
 
 #import "DLViewController.h"
+#import <DLPublic/DLPublic.h>
+
 @interface DLViewController ()
 
 @end
@@ -15,6 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [DLErrorParser parseErrorCode:33];
 }
 
 - (IBAction)showError:(id)sender {
