@@ -52,7 +52,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Pops view controllers until the one specified is on top. Returns the popped controllers.
  */
-- (nullable NSArray<__kindof UIViewController *> *)popToViewController:(nonnull Class)vClass animated:(BOOL)animated;
+- (nullable NSArray<__kindof UIViewController *> *)popToViewControllerClass:(nonnull Class)vClass animated:(BOOL)animated;
 
 /**
  Pops view controllers until count equal to `level`. Returns the popped controllers.

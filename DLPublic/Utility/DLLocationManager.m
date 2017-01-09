@@ -8,7 +8,7 @@
 
 #import "DLLocationManager.h"
 
-@interface DLLocation : NSObject
+@interface DLLocation()
 @property (nonatomic) NSString *province;
 @property (nonatomic) NSString *city;
 @property (nonatomic) NSString *district;
@@ -34,9 +34,12 @@
 
 typedef void (^DLLocationInfoBlock)(DLLocation *location, NSError *error);
 typedef void (^UpdatingLocationBlock)(NSArray<CLLocation *> *locations);
+
 @interface DLLocationManager()<CLLocationManagerDelegate>
+
 @property (nonatomic, copy) DLLocationInfoBlock infoBlock;
 @property (nonatomic, copy) UpdatingLocationBlock updatingLocation;
+
 @end
 
 @implementation DLLocationManager {
@@ -106,7 +109,7 @@ typedef void (^UpdatingLocationBlock)(NSArray<CLLocation *> *locations);
                 
                 [self stopUpdateLocation];
                 
-                if (!error) {
+                if (error) {
                     if (_infoBlock) {
                         _infoBlock(nil, error);
                     }

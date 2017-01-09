@@ -65,7 +65,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param appleID   Apple ID on itunesconnect.apple.com/App Infomation e.g. 919366201
  @param block     A block contains two arguments. If don't have new verion or error `newVersion` and `error` will both be nil.
  */
-+ (void)checkToUpdateAppVersionWithAppleID:(NSString *)appleID checkResult:(void (^)(NSString *newVersion, NSError *error))block ;
++ (void)updateWithAppleID:(NSString *)appleID complete:(void (^)(NSString *newVersion, NSError *error))completeBlock;
 @end
 
 NS_ASSUME_NONNULL_END

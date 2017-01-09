@@ -10,7 +10,7 @@
 
 @implementation UIColor (Public)
 
-+ (instancetype)colorWithHexString:(NSString *)hexStr {
++ (instancetype)dl_colorWithHexString:(NSString *)hexStr {
     CGFloat r, g, b, a;
     if (hexStrToRGBA(hexStr, &r, &g, &b, &a)) {
         return [UIColor colorWithRed:r green:g blue:b alpha:a];

@@ -44,7 +44,7 @@
     return self.viewControllers.count;
 }
 
-- (nullable NSArray<__kindof UIViewController *> *)popToViewController:(nonnull Class)vClass animated:(BOOL)animated {
+- (nullable NSArray<__kindof UIViewController *> *)popToViewControllerClass:(nonnull Class)vClass animated:(BOOL)animated {
     if ([[self topViewController] isKindOfClass:vClass]) return nil;
     UIViewController *dst = [self traverseViewController:vClass];
     if (dst) {

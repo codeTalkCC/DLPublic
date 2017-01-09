@@ -11,7 +11,17 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class DLLocation;
+/**
+ Locaion Infomation.
+ */
+@interface DLLocation : NSObject
+
+@property (nonnull, nonatomic, readonly) NSString *province;
+@property (nonnull, nonatomic, readonly) NSString *city;
+@property (nonnull, nonatomic, readonly) NSString *district;
+
+@end
+
 @interface DLLocationManager : NSObject
 
 - (instancetype)init UNAVAILABLE_ATTRIBUTE;

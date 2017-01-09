@@ -67,7 +67,7 @@
 
 - (void)_changeNetworkActivityCount:(NSInteger)delta {
     @synchronized(self){
-        dispatch_async_on_main_queue(^{
+        dl_dispatch_async_on_main_queue(^{
             _DLUIApplicationNetworkIndicatorInfo *info = [self networkActivityInfo];
             if (!info) {
                 info = [_DLUIApplicationNetworkIndicatorInfo new];
@@ -116,7 +116,9 @@
     }
 }
 
-+ (void)checkToUpdateAppVersionWithAppleID:(NSString *)appleID checkResult:(void (^)(NSString *newVersion, NSError *error))block {
++ (void)updateWithAppleID:(NSString *)appleID
+                 complete:(void (^)(NSString *newVersion, NSError *error))completeBlock {
+    if (appleID.length == 0) return;
     NSString *itunesURL = [NSString stringWithFormat:@"http://itunes.apple.com/lookup?id=%@", appleID];
     NSURL *url = [NSURL URLWithString:itunesURL];
     
@@ -125,7 +127,7 @@
         
         if (data == nil && error) {
             dispatch_async(dispatch_get_main_queue(), ^{
-               if (block) block(nil, error);
+               if (completeBlock) completeBlock(nil, error);
             });
             return;
         }
@@ -140,12 +142,12 @@
                 if ([remoteVersion compare:localVersion options:NSNumericSearch] == NSOrderedDescending) {
 //                    NSString *appUrl = result[@"trackViewUrl"];
                     dispatch_async(dispatch_get_main_queue(), ^{
-                        if (block) block(remoteVersion, nil);
+                        if (completeBlock) completeBlock(remoteVersion, nil);
                     });
                 }
                 else {
                     dispatch_async(dispatch_get_main_queue(), ^{
-                        if (block) block(nil, nil);
+                        if (completeBlock) completeBlock(nil, nil);
                     });
                 }
             }

@@ -57,17 +57,37 @@ NS_ASSUME_NONNULL_BEGIN
 #define kSystemVersion [UIDevice systemVersion]
 #endif
 
-#ifndef kiOS7Later
-#define kiOS7Later (kSystemVersion >= 7)
+#ifndef kDLiOS7Later
+#define kDLiOS7Later (kSystemVersion >= 7)
 #endif
 
-#ifndef kiOS8Later
-#define kiOS8Later (kSystemVersion >= 8)
+#ifndef kDLiOS8Later
+#define kDLiOS8Later (kSystemVersion >= 8)
 #endif
 
-#ifndef kiOS9Later
-#define kiOS9Later (kSystemVersion >= 9)
+#ifndef kDLiOS9Later
+#define kDLiOS9Later (kSystemVersion >= 9)
 #endif
+
+#ifndef kDLiOS10Later
+#define kDLiOS10Later (kSystemVersion >= 10)
+#endif
+
+// main screen's size (portrait)
+#ifndef kDLScreenSize
+#define kDLScreenSize YYScreenSize()
+#endif
+
+// main screen's width (portrait)
+#ifndef kDLScreenWidth
+#define kDLScreenWidth kDLScreenSize().width
+#endif
+
+// main screen's height (portrait)
+#ifndef kDLScreenHeight
+#define kDLScreenHeight kDLScreenSize().height
+#endif
+
 
 @end
 

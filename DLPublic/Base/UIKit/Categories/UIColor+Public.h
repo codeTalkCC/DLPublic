@@ -38,7 +38,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  @return        An UIColor object from string, or nil if an error occurs.
  */
-+ (nullable UIColor *)colorWithHexString:(NSString *)hexStr;
++ (nullable UIColor *)dl_colorWithHexString:(NSString *)hexStr;
 
 @end
 

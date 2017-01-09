@@ -63,7 +63,7 @@
 #pragma mark - Alert
 
 - (void)showAlertViewWithMessage:(NSString *)message {
-    if (kiOS8Later) {
+    if (kDLiOS8Later) {
         [self showAlterControllerWithMessage:message];
     } else {
 #pragma clang diagnostic push
