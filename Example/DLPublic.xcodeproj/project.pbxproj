@@ -181,6 +181,7 @@
 				DCAE1B7EB9C325B35D40F754 /* DLPublic.podspec */,
 				3E36C237CEAD22A89471AB03 /* README.md */,
 				F32A75746C753DAF78C70909 /* LICENSE */,
+				FE4527711E251F750069A6B1 /* ScreenShot */,
 			);
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
@@ -194,6 +195,13 @@
 				F2F160B042AEEBDFD9CEF43F /* Pods-DLPublic_Tests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		FE4527711E251F750069A6B1 /* ScreenShot */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ScreenShot;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
