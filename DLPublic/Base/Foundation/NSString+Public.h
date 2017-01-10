@@ -91,6 +91,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (nullable NSNumber *)numberValue;
 
+/**
+ Caculates characters length, Chinese may occupy two.
+ @return length of characters
+ */
+- (NSUInteger)charactersLength;
 
 #pragma mark - Encode and decode
 ///=============================================================================

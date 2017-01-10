@@ -268,4 +268,17 @@
     return [[self dataUsingEncoding:NSUTF8StringEncoding] md5String];
 }
 
+- (NSUInteger)charactersLength {
+    NSUInteger strlength = 0;
+    char *p = (char *)[self cStringUsingEncoding:NSUnicodeStringEncoding];
+    for (int i=0; i < [self lengthOfBytesUsingEncoding:NSUnicodeStringEncoding]; i++) {
+        if (*p) {
+            p++;
+            strlength++;
+        } else {
+            p++;
+        }
+    }
+    return strlength;
+}
 @end
