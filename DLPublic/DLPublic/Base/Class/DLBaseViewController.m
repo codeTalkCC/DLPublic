@@ -39,6 +39,7 @@
 #pragma mark - HUD
 
 - (void)showHUDInteractionEable:(BOOL)enable {
+    if (_indicator.animating) return;
     self.navigationController.view.userInteractionEnabled = enable;
     _indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
     _indicator.frame = CGRectMake(0, 0, 80, 80);

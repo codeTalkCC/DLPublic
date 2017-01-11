@@ -1,6 +1,0 @@
-framework module DLPublic {
-  umbrella header "DLPublic-umbrella.h"
-
-  export *
-  module * { export * }
-}
