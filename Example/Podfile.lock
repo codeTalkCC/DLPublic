@@ -1,5 +1,5 @@
 PODS:
-  - DLPublic (0.1.4)
+  - DLPublic (1.0.4)
 
 DEPENDENCIES:
   - DLPublic (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  DLPublic: 3bb4da0e5d4dc13fce8167a95a6a388de74e4011
+  DLPublic: c13620a15a77e648b33eaf99297d5c4139bc802c
 
 PODFILE CHECKSUM: bfe128313a54f7754a9c9c4977f808f712fb5714
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.1.1
