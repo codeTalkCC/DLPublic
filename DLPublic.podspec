@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DLPublic'
-  s.version          = '1.0.5'
+  s.version          = '1.0.6'
   s.summary          = 'DLPublic is common components used for routine.'
 
 # This description is used to generate tags and improve search results.
