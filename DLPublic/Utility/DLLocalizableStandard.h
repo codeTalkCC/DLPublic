@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 #ifndef DLLocalizedString
 #define DLLocalizedString(key) [[DLLocalizableStandard sharedStandard] stringWithKey:key]
 #endif
@@ -33,3 +35,6 @@
 - (NSString *)stringWithKey:(NSString *)key;
 
 @end
+
+
+NS_ASSUME_NONNULL_END
