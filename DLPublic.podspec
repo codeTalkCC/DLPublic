@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DLPublic'
-  s.version          = '1.0.4'
+  s.version          = '1.0.5'
   s.summary          = 'DLPublic is common components used for routine.'
 
 # This description is used to generate tags and improve search results.
@@ -23,7 +23,6 @@ This pulic contains iOS components used for routine.
                        DESC
 
   s.homepage         = 'http://192.168.30.20:3020/xfjiang/DLPublic'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'xfjiang' => 'xfjiang@idelan.cn' }
   s.source           = { :git => 'http://192.168.30.20:3020/xfjiang/DLPublic.git', :tag => s.version.to_s }
@@ -31,8 +30,7 @@ This pulic contains iOS components used for routine.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'DLPublic/Base/**/*', 'DLPublic/Utility/**/*', 'DLPublic/**'
-
+ s.source_files = 'DLPublic/Base/**/*', 'DLPublic/Utility/**/*', 'DLPublic/**'
 
   s.resource_bundles = {
      'DLPublic' => ['DLPublic/Assets/*']
