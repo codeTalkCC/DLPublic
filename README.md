@@ -34,25 +34,34 @@ end
 
 ## DLPublic
 
-`DLPublic.h`: Header
 
-#### Base
+- [Base]() —— 包含 ViController 基类，以及常用的 Category
+- [DLViews]() —— 常用的自定义视图控件
+- [Utility]()  ——通用类，例如：错误码解析，定位，键盘管理等
 
-*DLPublicMacro.h:* Common Macro File
+## 详细介绍
 
-*Class:* Base Class
+#### 通用控件
 
-*Foundation:* Foundation Category
+- [DLTextField]() —— 内容缩进的 UITextField
+- [DLTextFieldAttacnment]() —— 包含图标/名称的输入框
+- [DLBoxCheckButton]() —— 条款勾选框
+- [DLDatePopupView]() —— 时间选择器
 
-*UIKit:* UIKit Category
+#### 登录界面
+[!image]() 
+[DLLoginViewConfig]() —— 配置登录界面
+[DLLoginInputView]() —— 登录界面输入框部分
+[DLLoginView]() —— 登录页面
 
-#### Utility
-
-`DLErrorParser`: 错误码解析类
-
-`DLKeyboardManager`: 键盘管理
-
-`DLLocationManager`: 定位管理
+## 更新步骤
+1. 修改 `Pods/DLPublic/DLPublic/` 下源文件
+2. 编辑 PodSpec 文件，主要是修改版本号 s.version 属性
+3. 测试 PodSpec 文件格式是否正确：`pod lib lint`
+4. Push to repo
+5. 打 tag， tag 值要同版本号一致：`git tag 1.0.x`
+6. 更新 PodSpec 文件到仓库：`pod repo push PodSpecs *.podspec`
+7. 更新完毕
 
 ## License
 
