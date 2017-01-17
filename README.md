@@ -42,18 +42,18 @@ end
 
 #### 通用控件
 
-- [**DLTextField**](http://192.168.30.20:3020/xfjiang/DLPublic/src/master/DLPublic/DLViews/Widget/DLTextField.h) —— 内容缩进的 UITextField
-- [**DLTextFieldAttacnment**](http://192.168.30.20:3020/xfjiang/DLPublic/src/master/DLPublic/DLViews/Widget/DLTextFieldAttachment.h) —— 包含图标/名称的输入框
-- [**DLBoxCheckButton**](http://192.168.30.20:3020/xfjiang/DLPublic/src/master/DLPublic/DLViews/Widget/DLBoxCheckButton.h) —— 条款勾选框
-- [**DLDatePopupView**](http://192.168.30.20:3020/xfjiang/DLPublic/src/master/DLPublic/DLViews/Widget/DLDatePopupView.h) —— 时间选择器
+- [DLTextField](http://192.168.30.20:3020/xfjiang/DLPublic/src/master/DLPublic/DLViews/Widget/DLTextField.h) —— 内容缩进的 UITextField
+- [DLTextFieldAttacnment](http://192.168.30.20:3020/xfjiang/DLPublic/src/master/DLPublic/DLViews/Widget/DLTextFieldAttachment.h) —— 包含图标/名称的输入框
+- [DLBoxCheckButton](http://192.168.30.20:3020/xfjiang/DLPublic/src/master/DLPublic/DLViews/Widget/DLBoxCheckButton.h) —— 条款勾选框
+- [DLDatePopupView](http://192.168.30.20:3020/xfjiang/DLPublic/src/master/DLPublic/DLViews/Widget/DLDatePopupView.h) —— 时间选择器
 
 #### 登录界面
 
-[!image]() 
+[!image](http://192.168.30.20:3020/xfjiang/DLPublic/src/master/ScreenShot/login_shot.png) 
 
-[**DLLoginViewConfig**](http://192.168.30.20:3020/xfjiang/DLPublic/src/master/DLPublic/DLViews/Login/DLLoginViewConfig.h) —— 配置登录界面
-[**DLLoginInputView**](http://192.168.30.20:3020/xfjiang/DLPublic/src/master/DLPublic/DLViews/Login/DLLoginInputView.h) —— 登录界面输入框部分
-[**DLLoginView**](http://192.168.30.20:3020/xfjiang/DLPublic/src/master/DLPublic/DLViews/Login/DLLoginView.h) —— 登录页面
+[DLLoginViewConfig](http://192.168.30.20:3020/xfjiang/DLPublic/src/master/DLPublic/DLViews/Login/DLLoginViewConfig.h) —— 配置登录界面
+[DLLoginInputView](http://192.168.30.20:3020/xfjiang/DLPublic/src/master/DLPublic/DLViews/Login/DLLoginInputView.h) —— 登录界面输入框部分
+[DLLoginView](http://192.168.30.20:3020/xfjiang/DLPublic/src/master/DLPublic/DLViews/Login/DLLoginView.h) —— 登录页面
 
 ## 更新步骤
 1. 修改 `Pods/DLPublic/DLPublic/` 下源文件
