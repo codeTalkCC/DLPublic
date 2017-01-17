@@ -49,7 +49,7 @@ end
 
 #### 登录界面
 
-[!image](http://192.168.30.20:3020/xfjiang/DLPublic/src/master/ScreenShot/login_shot.png) 
+![image](http://192.168.30.20:3020/xfjiang/DLPublic/src/master/ScreenShot/login_shot.png) 
 
 [DLLoginViewConfig](http://192.168.30.20:3020/xfjiang/DLPublic/src/master/DLPublic/DLViews/Login/DLLoginViewConfig.h) —— 配置登录界面
 [DLLoginInputView](http://192.168.30.20:3020/xfjiang/DLPublic/src/master/DLPublic/DLViews/Login/DLLoginInputView.h) —— 登录界面输入框部分
