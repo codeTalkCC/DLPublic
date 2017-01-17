@@ -23,6 +23,7 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		FE853AF71E2E01D9001111EF /* login_screenshot.png in Resources */ = {isa = PBXBuildFile; fileRef = FE853AF61E2E01D9001111EF /* login_screenshot.png */; };
 		FEAAED611D38E4EF00B0C64D /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEAAED601D38E4EF00B0C64D /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,7 @@
 		F202BBE773027D2022F10CE3 /* Pods_DLPublic_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DLPublic_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2F160B042AEEBDFD9CEF43F /* Pods-DLPublic_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DLPublic_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DLPublic_Tests/Pods-DLPublic_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		F32A75746C753DAF78C70909 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		FE853AF61E2E01D9001111EF /* login_screenshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_screenshot.png; sourceTree = "<group>"; };
 		FEAAED601D38E4EF00B0C64D /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -200,6 +202,7 @@
 		FE4527711E251F750069A6B1 /* ScreenShot */ = {
 			isa = PBXGroup;
 			children = (
+				FE853AF61E2E01D9001111EF /* login_screenshot.png */,
 			);
 			path = ScreenShot;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				FEAAED611D38E4EF00B0C64D /* Launch Screen.storyboard in Resources */,
+				FE853AF71E2E01D9001111EF /* login_screenshot.png in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
