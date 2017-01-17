@@ -72,7 +72,7 @@ static NSString *const kUserLanguage = @"kUserLanguage";
 
 - (NSString *)stringWithKey:(NSString *)key {
     if (_bundle) {
-        return [_bundle localizedStringForKey:key value:nil table:@"DLLocalizable"];
+        return [_bundle localizedStringForKey:key value:nil table:@"Localizable"];
     }else {
         return NSLocalizedString(key, nil);
     }

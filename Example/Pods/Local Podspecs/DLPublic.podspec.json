@@ -21,6 +21,7 @@
   "source_files": [
     "DLPublic/Base/**/*",
     "DLPublic/Utility/**/*",
+    "DLPublic/DLViews/**/*",
     "DLPublic/**"
   ],
   "resource_bundles": {

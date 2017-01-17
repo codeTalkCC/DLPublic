@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DLPublic'
-  s.version          = '1.0.6'
+  s.version          = '1.0.6'	
   s.summary          = 'DLPublic is common components used for routine.'
 
 # This description is used to generate tags and improve search results.
@@ -30,7 +30,13 @@ This pulic contains iOS components used for routine.
 
   s.ios.deployment_target = '8.0'
 
- s.source_files = 'DLPublic/Base/**/*', 'DLPublic/Utility/**/*', 'DLPublic/**'
+ s.source_files = 'DLPublic/Base/**/*', 'DLPublic/Utility/**/*','DLPublic/DLViews/**/*', 'DLPublic/**'
+
+s.subspec 'Utility' do |utility|
+    utility.source_files = 'AFNetworking/AFSecurityPolicy.{h,m}'
+    utility.public_header_files = 'AFNetworking/AFSecurityPolicy.h'
+    utility.frameworks = 'Foundation'
+end
 
   s.resource_bundles = {
      'DLPublic' => ['DLPublic/Assets/*']
