@@ -58,8 +58,8 @@
         NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
         NSArray *languages = [userDefaults objectForKey:@"AppleLanguages"];
         NSString *preferredLang = [languages objectAtIndex:0];
-        if ([preferredLang isEqualToString:@"zh-Hans"]
-            || [preferredLang isEqualToString:@"zh-Hans-CN"]) {
+        if ([preferredLang hasPrefix:@"zh-Hans"]
+            || [preferredLang hasPrefix:@"zh-Hans-CN"]) {
             isChinese = YES;
         } else {
             isChinese = NO;

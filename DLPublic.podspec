@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DLPublic'
-  s.version          = '1.0.6'	
+  s.version          = '1.0.7'	
   s.summary          = 'DLPublic is common components used for routine.'
 
 # This description is used to generate tags and improve search results.
@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-This pulic contains iOS components used for routine.
+系统语言判断的bug更正
                        DESC
 
   s.homepage         = 'http://192.168.30.20:3020/xfjiang/DLPublic'
@@ -32,17 +32,17 @@ This pulic contains iOS components used for routine.
 
  s.source_files = 'DLPublic/Base/**/*', 'DLPublic/Utility/**/*','DLPublic/DLViews/**/*', 'DLPublic/**'
 
-s.subspec 'Utility' do |utility|
-    utility.source_files = 'AFNetworking/AFSecurityPolicy.{h,m}'
-    utility.public_header_files = 'AFNetworking/AFSecurityPolicy.h'
-    utility.frameworks = 'Foundation'
-end
+#s.subspec 'Utility' do |utility|
+#   utility.source_files = 'AFNetworking/AFSecurityPolicy.{h,m}'
+#   utility.public_header_files = 'AFNetworking/AFSecurityPolicy.h'
+#   utility.frameworks = 'Foundation'
+#end
 
   s.resource_bundles = {
      'DLPublic' => ['DLPublic/Assets/*']
   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'CoreLocation'
+  # s.frameworks = 'UIKit', 'CoreLocation', 'Foundation'
   # s.dependency 'AFNetworking', '~> 2.3'
 end
