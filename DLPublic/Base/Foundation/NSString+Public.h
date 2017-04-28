@@ -13,6 +13,15 @@ NS_ASSUME_NONNULL_BEGIN
 @interface NSString (Public)
 
 #pragma mark - Authenticate
+
+
+/**
+ 语言国际化
+
+ @return 本地化的语言
+ */
+- (NSString *)localString;
+
 ///=============================================================================
 /// @name Authenticate For Login or Registration
 ///=============================================================================

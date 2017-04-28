@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  应用内部的国际化
- 国际化文件的名称必须为：DLLocalizable.strings
+ 国际化文件的名称为标准名称：Localizable.strings
  */
 @interface DLLocalizableStandard : NSObject
 

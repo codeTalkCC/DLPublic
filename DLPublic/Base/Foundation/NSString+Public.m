@@ -9,6 +9,7 @@
 #import "NSString+Public.h"
 #import "NSData+Public.h"
 #import "NSNumber+Public.h"
+#import "DLLocalizableStandard.h"
 
 #define kUsernameLengthMin 4
 #define kUsernameLengthMax 20
@@ -17,6 +18,10 @@
 #define kUserPasswordLengthMax 16
 
 @implementation NSString (Public)
+
+- (NSString *)localString{
+    return [[DLLocalizableStandard sharedStandard]stringWithKey:self];
+}
 
 /**
  Because of nil cannot response message,

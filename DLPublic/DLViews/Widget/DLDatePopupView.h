@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)popup;
 - (void)showWithBlock:(void (^)(NSDate * __nonnull selectedDate))resultBlock;
-
+@property (nonatomic, strong, readwrite) UIDatePicker *datePicker;
 @end
 
 NS_ASSUME_NONNULL_END

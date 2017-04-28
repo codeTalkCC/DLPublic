@@ -19,7 +19,7 @@ static const CGFloat kAnimationDistance = 266;
 
 @property (nonatomic, strong) UIView *contentView;
 @property (nonatomic, strong) UILabel *titleLabel;
-@property (nonatomic, strong, readwrite) UIDatePicker *datePicker;
+
 @property (nonatomic, strong) void (^resultBlock)(NSDate *date);;
 
 @end

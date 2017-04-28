@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-系统语言判断的bug更正
+系统语言判断的bug更正，本地化语言bug的修正，时间选择器控件暴露datePicker，方便设置属性 v-1.0.7
                        DESC
 
   s.homepage         = 'http://192.168.30.20:3020/xfjiang/DLPublic'
