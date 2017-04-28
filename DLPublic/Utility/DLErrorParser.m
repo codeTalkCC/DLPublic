@@ -15,10 +15,8 @@
     BOOL chinese = [self currentSystemLanguageIsChinese];
     NSString *fileName = chinese ? @"errorCode_cn" : @"errorCode_en";
     NSBundle *currentBundle = [NSBundle bundleForClass:self.class];
-    NSURL *bundleURL = [currentBundle URLForResource:@"DLPublic" withExtension:@"bundle"];
-    if (bundleURL) {
-        NSBundle *xmlBundle = [NSBundle bundleWithURL:bundleURL];
-        NSString *path = [xmlBundle pathForResource:fileName ofType:@"xml"];
+    if (currentBundle) {
+        NSString *path = [currentBundle pathForResource:fileName ofType:@"xml"];
         NSData *xmlData = [NSData dataWithContentsOfFile:path];
         NSDictionary *resultDic = [NSDictionary dictionaryWithXML:xmlData];
         NSArray *errDictArray = resultDic[@"error"];
