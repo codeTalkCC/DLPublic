@@ -10,11 +10,12 @@
 #import "DLErrorParser.h"
 #import "UIResponder+Public.h"
 #import "UIView+Public.h"
-
-
 #import "UIDevice+Public.h"
 
-@interface DLBaseViewController ()
+#import "DLKeyboardManager.h"
+#import "UIResponder+Public.h"
+
+@interface DLBaseViewController ()<DLKeyboardObserver>
 
 @end
 
@@ -28,6 +29,9 @@
     UIBarButtonItem *barItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:(UIBarButtonItemStylePlain) target:nil action:nil];
     [barItem setTintColor:[UIColor whiteColor]];
     self.navigationItem.backBarButtonItem = barItem;
+    
+    //添加键盘的观察者
+    [[DLKeyboardManager defaultManager]addObserver:self];
 }
 
 - (void)setBackgroundImage:(UIImage *)backgroundImage {
