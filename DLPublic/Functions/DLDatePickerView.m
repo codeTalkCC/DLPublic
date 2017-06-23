@@ -6,16 +6,13 @@
 //  Copyright © 2016 HangZhou DeLan Technology Co. All rights reserved.
 //
 
-#import "DLDatePopupView.h"
-#import "DLLocalizableStandard.h"
-#import <DLPublic/DLPublic.h>
-#import "DLUILayout.h"
+#import "DLDatePickerView.h"
 
 static const CGFloat kDatePickerHeight = 216;
 static const CGFloat kAnimationDuration = 0.3;
 static const CGFloat kAnimationDistance = 266;
 
-@interface DLDatePopupView ()
+@interface DLDatePickerView ()
 
 @property (nonatomic, strong) UIView *contentView;
 @property (nonatomic, strong) UILabel *titleLabel;
@@ -24,7 +21,7 @@ static const CGFloat kAnimationDistance = 266;
 
 @end
 
-@implementation DLDatePopupView
+@implementation DLDatePickerView
 
 + (instancetype)popup {
     return [[self alloc] init];
@@ -45,10 +42,6 @@ static const CGFloat kAnimationDistance = 266;
     return self;
 }
 
-- (void)setDatePickerMode:(UIDatePickerMode)datePickerMode {
-    _datePickerMode = datePickerMode;
-    _datePicker.datePickerMode = datePickerMode;
-}
 
 - (void)showWithBlock:(void (^)(NSDate * _Nonnull))resultBlock {
     UIWindow *mainWindow = [[UIApplication sharedApplication].delegate window];
@@ -66,7 +59,7 @@ static const CGFloat kAnimationDistance = 266;
 
 - (void)hide {
     CGRect frame = _contentView.frame;
-    frame.origin.y = self.height;
+    frame.origin.y = self.frame.size.height;
     [UIView animateWithDuration:kAnimationDuration delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
         _contentView.frame = frame;
     } completion:^(BOOL finished) {
@@ -86,41 +79,49 @@ static const CGFloat kAnimationDistance = 266;
 }
 
 - (void)setUp {
-    CGRect frame = (CGRect){0, CGRectGetHeight(self.bounds),
-        CGRectGetWidth(self.bounds), kDatePickerHeight + 50};
+    CGRect frame = (CGRect){0, CGRectGetHeight(self.bounds),CGRectGetWidth(self.bounds),kDatePickerHeight + 50};
     UIView *contentView = [[UIView alloc] initWithFrame:frame];
     contentView.backgroundColor = [UIColor whiteColor];
     [self addSubview:contentView];
     _contentView = contentView;
     
+    //取消
     UIButton *cancelButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [cancelButton setTitle:DLLocalizedString(@"cancel") forState:UIControlStateNormal];
+    [cancelButton setTitle:@"取消" forState:UIControlStateNormal];
     UIColor *cancelColor = [UIColor colorWithRed:14/255.0 green:154/255.0 blue:242/255.0 alpha:1.0];
     [cancelButton setTitleColor:cancelColor forState:UIControlStateNormal];
     [cancelButton sizeToFit];
-    cancelButton.top = DLVerticalMargin/2;
-    cancelButton.left = DLHorizontalMargin;
+    CGRect cancelFrame = cancelButton.frame;
+    cancelFrame.origin.y = 8;
+    cancelFrame.origin.x = 16;
+    cancelButton.frame = cancelFrame;
     [cancelButton addTarget:self action:@selector(cancelButtonOnTouched:) forControlEvents:UIControlEventTouchUpInside];
     [contentView addSubview:cancelButton];
+    _cancelButton = cancelButton;
     
+    //确定
     UIButton *confirmButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [confirmButton setTitle:DLLocalizedString(@"confirm") forState:UIControlStateNormal];
+    [confirmButton setTitle:@"确定" forState:UIControlStateNormal];
     UIColor *confirmColor = [UIColor colorWithRed:14/255.0 green:154/255.0 blue:242/255.0 alpha:1.0];
     [confirmButton setTitleColor:confirmColor forState:UIControlStateNormal];
     [confirmButton sizeToFit];
-    confirmButton.top = DLVerticalMargin / 2;
-    confirmButton.right = self.width - DLHorizontalMargin;
+    CGRect confirmFrame = confirmButton.frame;
+    confirmFrame.origin.y = 8;
+    confirmFrame.origin.x = CGRectGetWidth(self.frame) - 16 - CGRectGetWidth(confirmButton.frame);
+    confirmButton.frame = confirmFrame;
     [confirmButton addTarget:self action:@selector(confirmButtonOnTouched:) forControlEvents:UIControlEventTouchUpInside];
     [contentView addSubview:confirmButton];
+    [contentView addSubview:self.adressPickerView];
+    _confimButton = confirmButton;
     
-    UILabel *titleLabel = [UILabel new];
-    titleLabel.font = [UIFont systemFontOfSize:14.0];
-    titleLabel.left = confirmButton.right;
-    titleLabel.right = cancelButton.left;
-    titleLabel.height = 50;
-    titleLabel.textAlignment = NSTextAlignmentCenter;
-    [contentView addSubview:titleLabel];
-    _titleLabel = titleLabel;
+    //横线
+    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, 49, self.bounds.size.width, 1)];
+    label.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    [contentView addSubview:label];
+    
+    //pickerView
+    [_contentView addSubview:_adressPickerView];
+    self.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.2];
     
     _datePicker = [UIDatePicker new];
     [_datePicker addTarget:self action:@selector(datePickerValueChanged:) forControlEvents:UIControlEventValueChanged];

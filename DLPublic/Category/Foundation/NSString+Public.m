@@ -12,7 +12,10 @@
 #import "DLLocalizableStandard.h"
 
 #define kUsernameLengthMin 4
-#define kUsernameLengthMax 20
+#define kUsernameLengthMax 64
+
+#define kDevNameLengthMin 1
+#define kDevNameLengthMax 64
 
 #define kUserPasswordLengthMin 6
 #define kUserPasswordLengthMax 16
@@ -62,10 +65,14 @@
 }
 
 - (BOOL)stringIsPhoneNumber {
-    if (self.length == 11) {
-        return YES;
+    if (self.length == 0) {
+        return NO;
     }
-    return NO;
+    NSString *lessString = [self stringByTrimmingCharactersInSet:[NSCharacterSet decimalDigitCharacterSet]];
+    if(lessString.length > 0) {
+        return NO;  //含有非数字
+    }
+    return YES;
 //    /**
 //     * 手机号码
 //     * 移动：134[0-8],135,136,137,138,139,150,151,157,158,159,182,187,188
@@ -124,6 +131,14 @@
 //        return NO;
 //    }
 
+}
+
+- (BOOL)isLegalDevName{
+    if (self.length < kDevNameLengthMin || self.length > kDevNameLengthMax) {
+        return NO;
+    } else {
+        return YES;
+    }
 }
 
 - (BOOL)stringIsEmail {

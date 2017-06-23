@@ -27,27 +27,43 @@ NS_ASSUME_NONNULL_BEGIN
 ///=============================================================================
 
 /**
+ Whether Login or Registration user name length between \e 4 and \e 64.
+ 
+ @return If valid will Returns YES; otherwise Returns NO.
+ If NO, prompt '请输入4～64位的用户名'.
+ */
+- (BOOL)stringIsUsername;
+
+/**
+ Whether string is phone number.
+ 
+ if NO, prompt '请输入正确的手机号码'.
+ 手机号格式变换太快，判断手机号建议使用11长度，这个判断不标准
+ */
+- (BOOL)stringIsPhoneNumber;
+
+/**
+ Whether Login or Registration password length between \e 6 and \e 16.
+ 
+ @return If valid will Returns YES; otherwise Returns NO.
+ If NO, prompt '请输入6～16位的密码'.
+ */
+- (BOOL)stringIsPassword;
+
+/**
+ 设备名称是否符合要求
+ 否：提示“请输入1～64位的设备名称”
+ */
+- (BOOL)isLegalDevName;
+
+
+/**
  nil, @"", @"  ", @"\n" will Returns NO; otherwise Returns YES.
  
  @discussion 可用于判断用户名或者密码是否为空
  */
 - (BOOL)isNotEmpty;
 
-/**
- Whether Login or Registration user name length between \e 4 and \e 20.
- 
- @return If valid will Returns YES; otherwise Returns NO.
- If NO, prompt '请输入4-20位用户名'.
- */
-- (BOOL)stringIsUsername;
-
-/**
- Whether Login or Registration password length between \e 6 and \e 16.
- 
- @return If valid will Returns YES; otherwise Returns NO.
- If NO, prompt '密码不能小于6个字符，并且不能大于16个字符，请重新输入密码'.
- */
-- (BOOL)stringIsPassword;
 
 /**
  Whether string is cantain special character.
@@ -56,13 +72,6 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (BOOL)containsSpecialCharacter;
 
-/**
- Whether string is phone number.
- 
- if NO, prompt '手机号格式不正确'.
- 手机号格式变换太快，判断手机号建议使用11长度，这个判断不标准
- */
-- (BOOL)stringIsPhoneNumber;
 
 /**
  Whether string is email.

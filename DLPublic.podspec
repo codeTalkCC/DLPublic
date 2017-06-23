@@ -9,8 +9,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DLPublic'
-  s.version          = '1.0.9'	
-  s.summary          = 'DLPublic is common components used for routine.'
+  s.version          = '1.1.0'	
+  s.summary          = '为了更好的开发与代码复用,把大多数项目经常用到的功能与文件整理进了DLPublic'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -19,8 +19,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-DLPublic is common components used for routine.
-手机号判断改为只判断位数 1.0.9
+功能介绍:
                        DESC
 
   s.homepage         = 'http://192.168.30.20:3020/xfjiang/DLPublic'
@@ -31,7 +30,7 @@ DLPublic is common components used for routine.
 
   s.ios.deployment_target = '8.0'
 
- s.source_files = 'DLPublic/Base/**/*', 'DLPublic/Utility/**/*','DLPublic/DLViews/**/*', 'DLPublic/**'
+ s.source_files = 'DLPublic/**/*.{h,m}'
 
 #s.subspec 'Utility' do |utility|
 #   utility.source_files = 'AFNetworking/AFSecurityPolicy.{h,m}'

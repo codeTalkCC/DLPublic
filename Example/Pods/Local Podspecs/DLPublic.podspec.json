@@ -1,8 +1,8 @@
 {
   "name": "DLPublic",
-  "version": "1.0.6",
-  "summary": "DLPublic is common components used for routine.",
-  "description": "This pulic contains iOS components used for routine.",
+  "version": "1.1.0",
+  "summary": "为了更好的开发与代码复用,把大多数项目经常用到的功能与文件整理进了DLPublic",
+  "description": "功能介绍:",
   "homepage": "http://192.168.30.20:3020/xfjiang/DLPublic",
   "license": {
     "type": "MIT",
@@ -13,17 +13,12 @@
   },
   "source": {
     "git": "http://192.168.30.20:3020/xfjiang/DLPublic.git",
-    "tag": "1.0.6"
+    "tag": "1.1.0"
   },
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": [
-    "DLPublic/Base/**/*",
-    "DLPublic/Utility/**/*",
-    "DLPublic/DLViews/**/*",
-    "DLPublic/**"
-  ],
+  "source_files": "DLPublic/**/*.{h,m}",
   "resource_bundles": {
     "DLPublic": [
       "DLPublic/Assets/*"

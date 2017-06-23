@@ -16,9 +16,13 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @interface DLLocation : NSObject
 
-@property (nonnull, nonatomic, readonly) NSString *province;
-@property (nonnull, nonatomic, readonly) NSString *city;
-@property (nonnull, nonatomic, readonly) NSString *district;
+@property (nonnull, nonatomic, readonly) NSString *province;    //省
+@property (nonnull, nonatomic, readonly) NSString *city;        //市
+@property (nonnull, nonatomic, readonly) NSString *district;    //区
+@property (assign, nonatomic, readonly) CGFloat longitude;      //经度
+@property (assign, nonatomic, readonly) CGFloat latitude;       //纬度
+@property (assign, nonatomic, readonly) CGFloat altitude;       //高度
+@property (strong, nonatomic, readonly) NSString *postalCode;   //邮政编码
 
 @end
 
@@ -32,6 +36,8 @@ NS_ASSUME_NONNULL_BEGIN
  Gets default manager.
  */
 + (instancetype)defaultManager;
+
+@property (strong, nonatomic)DLLocation *currentLocation;
 
 /**
  Starts updating location, used for get weather state.
