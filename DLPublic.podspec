@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DLPublic'
-  s.version          = '1.0.9.1'	
+  s.version          = '1.0.9.2'	
   s.summary          = '为了更好的开发与代码复用,把大多数项目经常用到的功能与文件整理进了DLPublic'
 
 # This description is used to generate tags and improve search results.
@@ -19,7 +19,8 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-功能介绍:
+为了更好的开发与代码复用,把大多数项目经常用到的功能与文件整理进了DLPublic
+功能介绍:分类集合 与 功能集合
                        DESC
 
   s.homepage         = 'http://192.168.30.20:3020/xfjiang/DLPublic'

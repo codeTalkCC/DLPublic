@@ -10,6 +10,7 @@
 #import <DLPublic/DLPublic.h>
 
 static NSString *T_DLDatePickerView = @"T_DLDatePickerView";
+static NSString *T_DLAddressPickerView = @"T_DLAddressPickerView";
 
 @interface DLViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -22,7 +23,7 @@ static NSString *T_DLDatePickerView = @"T_DLDatePickerView";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _testArray = @[T_DLDatePickerView];
+    _testArray = @[T_DLDatePickerView,T_DLAddressPickerView];
     [self creatableView];
     self.view.backgroundColor = [UIColor blueColor];
 }
@@ -63,6 +64,9 @@ static NSString *T_DLDatePickerView = @"T_DLDatePickerView";
     if ([functionString isEqualToString:T_DLDatePickerView]) {
         [self T_DLDatePickerView_Action];
     }
+    if ([functionString isEqualToString:T_DLAddressPickerView]) {
+        [self T_DLAddressPickerView_Avtion];
+    }
 }
 
 
@@ -77,6 +81,13 @@ static NSString *T_DLDatePickerView = @"T_DLDatePickerView";
     [pickerView.confimButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
     [pickerView showWithBlock:^(NSDate * _Nonnull selectedDate) {
         NSLog(@"select date:%@",selectedDate);
+    }];
+}
+
+- (void)T_DLAddressPickerView_Avtion{
+    DLAdressPickerView *pickerView = [DLAdressPickerView popup];
+    [pickerView showWithCompletion:^(NSString * _Nonnull province, NSString * _Nonnull city, NSString * _Nonnull district) {
+        NSLog(@"%@%@%@",province,city,district);
     }];
 }
 @end

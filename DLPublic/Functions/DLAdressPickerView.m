@@ -63,8 +63,10 @@ static NSArray *provinceNameArray;          //为了记录顺序
 
 - (void)loadData{
     if (!provinceToCityDic) {
-        
-        NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"Address" ofType:@"plist"];
+        NSBundle *bundle = [NSBundle bundleForClass:[DLAdressPickerView class]];
+        NSURL *url = [bundle URLForResource:@"DLPublic" withExtension:@"bundle"];
+        NSBundle *addressBundle = [NSBundle bundleWithURL:url];
+        NSString *plistPath = [addressBundle pathForResource:@"Address" ofType:@"plist"];
         NSArray *provinceArray = [[NSArray alloc] initWithContentsOfFile:plistPath];
         //数据结构重构
         NSMutableDictionary *provinceNameToCitysDic = [[NSMutableDictionary alloc]init];
