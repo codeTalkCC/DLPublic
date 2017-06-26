@@ -12,6 +12,16 @@
 
 @implementation NSData (Public)
 
+- (NSDictionary *)jsonDic{
+    NSError *error = nil;
+    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:self options:NSJSONReadingMutableLeaves error:&error];
+    if (error) {
+        NSLog(@"json解析出错:%@",error);
+        return [NSDictionary dictionary];
+    }
+    return dic;
+}
+
 - (NSString *)md5String {
     unsigned char result[CC_MD5_DIGEST_LENGTH];
     CC_MD5(self.bytes, (CC_LONG)self.length, result);

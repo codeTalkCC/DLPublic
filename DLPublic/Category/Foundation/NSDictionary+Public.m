@@ -9,6 +9,7 @@
 #import "NSDictionary+Public.h"
 #import "NSString+Public.h"
 
+
 @interface NSDictionary_Public : NSObject @end
 @implementation NSDictionary_Public @end
 
@@ -155,6 +156,7 @@
 @end
 
 
+
 @implementation NSDictionary (Public)
 
 + (NSDictionary *)dictionaryWithXML:(id)xml {
@@ -167,5 +169,14 @@
     return [parser result];
 }
 
+- (NSData *)jsonData{
+    NSError *error = nil;
+    NSData *data = [NSJSONSerialization dataWithJSONObject:self options:NSJSONWritingPrettyPrinted error:&error];
+    if (error) {
+        NSLog(@"json解析出错:%@",error);
+        return [NSData data];
+    }
+    return data;
+}
 
 @end

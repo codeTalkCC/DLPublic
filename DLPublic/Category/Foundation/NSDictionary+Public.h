@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSDictionary (Public)
 
+- (NSData *)jsonData;
+
 /**
  Try to parse an XML and wrap it into a dictionary.
  If you just want to get some value from a small xml, try this.

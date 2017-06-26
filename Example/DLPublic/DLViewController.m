@@ -9,7 +9,12 @@
 #import "DLViewController.h"
 #import <DLPublic/DLPublic.h>
 
-@interface DLViewController ()
+static NSString *T_DLDatePickerView = @"T_DLDatePickerView";
+
+@interface DLViewController ()<UITableViewDataSource, UITableViewDelegate>
+
+@property (strong, nonatomic) UITableView *tableView;
+@property (strong, nonatomic) NSArray *testArray;
 
 @end
 
@@ -17,11 +22,61 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [DLErrorParser parseErrorCode:33];
+    _testArray = @[T_DLDatePickerView];
+    [self creatableView];
+    self.view.backgroundColor = [UIColor blueColor];
 }
 
-- (IBAction)showError:(id)sender {
-    [self showErrorMessageWithCode:-11];
+- (void)creatableView{
+    _tableView = [[UITableView alloc]init];
+    _tableView.tableFooterView = [UIView new];
+    _tableView.dataSource = self;
+    _tableView.delegate = self;
+    _tableView.frame = self.view.bounds;
+    [self.view addSubview:_tableView];
+    
 }
 
+#pragma mark - UITableViewDataSource
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return _testArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *CellIndentifier = @"CellIndentifier";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIndentifier];
+    if (!cell) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIndentifier];
+    }
+    NSString *title = _testArray[indexPath.row];
+    cell.textLabel.text = title;
+    return cell;
+}
+
+#pragma mark - UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSString *functionString = _testArray[indexPath.row];
+    if ([functionString isEqualToString:T_DLDatePickerView]) {
+        [self T_DLDatePickerView_Action];
+    }
+}
+
+
+#pragma mark - ActionTest
+
+/**
+ T_DLDatePickerView_Action
+ */
+- (void)T_DLDatePickerView_Action{
+    NSLog(@"test");
+    DLDatePickerView *pickerView = [DLDatePickerView popup];
+    [pickerView.confimButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    [pickerView showWithBlock:^(NSDate * _Nonnull selectedDate) {
+        NSLog(@"select date:%@",selectedDate);
+    }];
+}
 @end
