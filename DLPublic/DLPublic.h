@@ -43,7 +43,7 @@
 #import <DLPublic/DLSingleton.h>
 #import <DLPublic/DLTimer.h>
 #import <DLPublic/DLScanViewController.h>
-
+#import <DLPublic/DLNetworkUtil.h>
 #else
 
 //Foundation
@@ -76,6 +76,7 @@
 #import "DLSingleton.h"
 #import "DLTimer.h"
 #import "DLScanViewController.h"
+#import "DLNetworkUtil.h"
 
 #endif
 #endif

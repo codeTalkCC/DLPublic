@@ -11,6 +11,7 @@
 
 static NSString *T_DLDatePickerView = @"T_DLDatePickerView";
 static NSString *T_DLAddressPickerView = @"T_DLAddressPickerView";
+static NSString *T_DLNetworkUtil = @"T_DLNetworkUtil";
 
 @interface DLViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -23,7 +24,7 @@ static NSString *T_DLAddressPickerView = @"T_DLAddressPickerView";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _testArray = @[T_DLDatePickerView,T_DLAddressPickerView];
+    _testArray = @[T_DLDatePickerView,T_DLAddressPickerView,T_DLNetworkUtil];
     [self creatableView];
     self.view.backgroundColor = [UIColor blueColor];
 }
@@ -61,11 +62,15 @@ static NSString *T_DLAddressPickerView = @"T_DLAddressPickerView";
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSString *functionString = _testArray[indexPath.row];
+//    NSString *actionString = [NSString stringWithFormat:@"%@_Action",functionString];
     if ([functionString isEqualToString:T_DLDatePickerView]) {
         [self T_DLDatePickerView_Action];
     }
     if ([functionString isEqualToString:T_DLAddressPickerView]) {
         [self T_DLAddressPickerView_Avtion];
+    }
+    if ([functionString isEqualToString:T_DLNetworkUtil]) {
+        [self T_DLNetworkUtil_Action];
     }
 }
 
@@ -89,5 +94,10 @@ static NSString *T_DLAddressPickerView = @"T_DLAddressPickerView";
     [pickerView showWithCompletion:^(NSString * _Nonnull province, NSString * _Nonnull city, NSString * _Nonnull district) {
         NSLog(@"%@%@%@",province,city,district);
     }];
+}
+
+- (void)T_DLNetworkUtil_Action{
+    NSDictionary *dic = [DLNetworkUtil getWifiInfo];
+    NSLog(@"%@",dic);
 }
 @end
