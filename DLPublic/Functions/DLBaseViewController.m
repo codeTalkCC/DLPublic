@@ -107,7 +107,15 @@
         ([firstResponder isKindOfClass:[UITextField class]] ||
          [firstResponder isKindOfClass:[UITextView class]])) {
             BOOL willShow = [[DLKeyboardManager defaultManager] isKeyboardVisible];
-            if (firstResponder.bottom > CGRectGetMinY(toFrame) && willShow) {
+            //firstResponder在整个view的位置
+            CGFloat locationBYInView = firstResponder.height;
+            UIView *resultView = firstResponder;
+            do {
+                locationBYInView += resultView.top;
+                resultView = resultView.superview;
+            } while (resultView != self.view);
+            
+            if (locationBYInView > CGRectGetMinY(toFrame) && willShow) {
                 [self adjustFirstResponderWithFrame:toFrame duration:transition.animationDuration];
             } else if (fabs(firstResponder.bottom - CGRectGetMinY(fromFrame)) < fromFrame.size.height && !willShow){
                 [self adjustFirstResponderWithFrame:toFrame duration:transition.animationDuration];

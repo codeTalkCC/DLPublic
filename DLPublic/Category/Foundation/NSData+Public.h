@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface NSData (Public)
 
 #pragma mark - JSON
-- (NSDictionary *)jsonDic;
+- (NSDictionary *)jsonDic;    
 
 #pragma mark - Hash
 ///=============================================================================
