@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DLPublic'
-  s.version          = '1.0.9.4'	
+  s.version          = '1.0.9.5'	
   s.summary          = '为了更好的开发与代码复用,把大多数项目经常用到的功能与文件整理进了DLPublic'
 
 # This description is used to generate tags and improve search results.
@@ -23,10 +23,10 @@ Pod::Spec.new do |s|
 功能介绍:分类集合 与 功能集合
                        DESC
 
-  s.homepage         = 'http://192.168.30.20:3020/xfjiang/DLPublic'
+  s.homepage         = 'https://github.com/codeTalkCC/DLPublic.git'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'xfjiang' => 'xfjiang@idelan.cn' }
-  s.source           = { :git => 'http://192.168.30.20:3020/xfjiang/DLPublic.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/codeTalkCC/DLPublic.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
