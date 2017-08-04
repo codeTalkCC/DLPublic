@@ -61,7 +61,7 @@ Functions文件 - 常用的一些功能
 6. 更新 PodSpec 文件到cocoapods官方仓库：`pod trunk push DLPublic.podspec`
 7. 更新完毕
 8. 搜索命令：pod search DLPublic
-
+9. 协同工作：pod trunk add-owner DLPublic email@email.com
 ## License
 
 `DLPublic` is available under the MIT license. See the LICENSE file for more info.
