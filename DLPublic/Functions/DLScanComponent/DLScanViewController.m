@@ -270,11 +270,11 @@ static const char * kQRCodeScanQueueName = "QRCodeScanQueueName";
 
 - (void)reportScanResult:(NSString *)result
 {
+    [self playAudioServices];  // 播放音效
+    [self.navigationController popViewControllerAnimated:YES];
     if ([_delegate respondsToSelector:@selector(scanViewController:didFinishScan:)]) {
         [_delegate scanViewController:self didFinishScan:result];
     }
-    [self playAudioServices];  // 播放音效
-    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark - QRViewDelegate
