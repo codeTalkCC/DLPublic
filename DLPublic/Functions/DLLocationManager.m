@@ -150,7 +150,7 @@ typedef void (^UpdatingLocationBlock)(NSArray<CLLocation *> *locations);
                     NSString *pastalCode = placemark.postalCode ? : @"";
                     if (province && city && district) {
                         DLLocation *dlLocation = [[DLLocation alloc] initLocationWithProvince:province city:city district:district longitude:longitude latitude:latitude altitude:altitude postalCode:pastalCode];
-                        
+                        self.currentLocation = dlLocation;
                         if (_infoBlock) _infoBlock(dlLocation, nil);
                     } else {
                         NSError *error = [NSError errorWithDomain:@"com.domain.public" code:1000 userInfo:nil];
