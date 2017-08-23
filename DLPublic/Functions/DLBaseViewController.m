@@ -113,7 +113,7 @@
             do {
                 locationBYInView += resultView.top;
                 resultView = resultView.superview;
-            } while (resultView != self.view);
+            } while (resultView != self.view && resultView != nil);
             
             if (locationBYInView > CGRectGetMinY(toFrame) && willShow) {
                 [self adjustFirstResponderWithFrame:toFrame duration:transition.animationDuration];

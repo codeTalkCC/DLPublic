@@ -12,6 +12,7 @@
 static NSString *T_DLDatePickerView = @"T_DLDatePickerView";
 static NSString *T_DLAddressPickerView = @"T_DLAddressPickerView";
 static NSString *T_DLNetworkUtil = @"T_DLNetworkUtil";
+static NSString *T_TextField = @"T_TextField";
 
 @interface DLViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -24,7 +25,7 @@ static NSString *T_DLNetworkUtil = @"T_DLNetworkUtil";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _testArray = @[T_DLDatePickerView,T_DLAddressPickerView,T_DLNetworkUtil];
+    _testArray = @[T_DLDatePickerView,T_DLAddressPickerView,T_DLNetworkUtil,T_TextField];
     [self creatableView];
     self.view.backgroundColor = [UIColor blueColor];
 }
@@ -54,8 +55,15 @@ static NSString *T_DLNetworkUtil = @"T_DLNetworkUtil";
     if (!cell) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIndentifier];
     }
-    NSString *title = _testArray[indexPath.row];
+    NSString *functionString = _testArray[indexPath.row];
+    NSString *title = functionString;
     cell.textLabel.text = title;
+    if ([functionString isEqualToString:T_TextField]) {
+        UITextField *textField = [[UITextField alloc]init];
+        textField.frame = CGRectMake(111, 0, 100, 44);
+        textField.backgroundColor = [UIColor grayColor];
+        [cell.contentView addSubview:textField];
+    }
     return cell;
 }
 
@@ -71,6 +79,9 @@ static NSString *T_DLNetworkUtil = @"T_DLNetworkUtil";
     }
     if ([functionString isEqualToString:T_DLNetworkUtil]) {
         [self T_DLNetworkUtil_Action];
+    }
+    if ([functionString isEqualToString:T_TextField]) {
+        [self T_TextField_Action ];
     }
 }
 
@@ -99,5 +110,9 @@ static NSString *T_DLNetworkUtil = @"T_DLNetworkUtil";
 - (void)T_DLNetworkUtil_Action{
     NSDictionary *dic = [DLNetworkUtil getWifiInfo];
     NSLog(@"%@",dic);
+}
+
+- (void)T_TextField_Action{
+    
 }
 @end
