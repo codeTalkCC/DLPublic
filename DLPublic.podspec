@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DLPublic'
-  s.version          = '1.0.9.8'	
+  s.version          = '1.0.9.9'	
   s.summary          = '为了更好的开发与代码复用,把大多数项目经常用到的功能与文件整理进了DLPublic'
 
 # This description is used to generate tags and improve search results.
