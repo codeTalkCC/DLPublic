@@ -17,7 +17,7 @@
 static CGFloat kTransportScale = 0.7;
 static const char * kQRCodeScanQueueName = "QRCodeScanQueueName";
 
-@interface DLScanViewController ()<AVCaptureMetadataOutputObjectsDelegate, QRViewDelegate>
+@interface DLScanViewController ()<AVCaptureMetadataOutputObjectsDelegate, QRViewDelegate,UIAlertViewDelegate>
 
 @property (nonatomic) AVCaptureDeviceInput *captureDeviceInput;
 @property (nonatomic) AVCaptureMetadataOutput *captureMetadataOutput;
@@ -167,6 +167,9 @@ static const char * kQRCodeScanQueueName = "QRCodeScanQueueName";
     _captureDeviceInput = [AVCaptureDeviceInput deviceInputWithDevice:captureDevice error:&error];
     if (!_captureDeviceInput) {
         NSLog(@"无摄像头%@", [error localizedDescription]);
+        //这这里进行出错处理
+        [self showAlertWithMessage:@"请先开启相机权限"];
+        return;
     }
 
     _captureSession = [[AVCaptureSession alloc] init];
@@ -299,7 +302,8 @@ static const char * kQRCodeScanQueueName = "QRCodeScanQueueName";
 - (void)showAlertWithMessage:(NSString *)message
 {
     NSString *msg = [NSString stringWithFormat:@"%@",message];
-    UIAlertView *alerterView = [[UIAlertView alloc] initWithTitle:@"提示" message:msg delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+    UIAlertView *alerterView = [[UIAlertView alloc] initWithTitle:@"提示" message:msg delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"去设置", nil];
+    alerterView.delegate = self;
     [alerterView show];
 }
 
@@ -309,6 +313,23 @@ static const char * kQRCodeScanQueueName = "QRCodeScanQueueName";
     SystemSoundID soundID = 0;
     AudioServicesCreateSystemSoundID((__bridge CFURLRef)(url), &soundID);
     AudioServicesPlaySystemSound(soundID);
+}
+
+#pragma mark - UIAlertViewDelegate
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    
+    if (buttonIndex == 1) {
+        //跳转相机权限设置命令
+        NSURL *cameralURL = [NSURL URLWithString:@"APP-Prefs:root=Privacy&path=CAMERA"];
+        [[UIApplication sharedApplication] openURL:cameralURL options:[NSDictionary dictionary] completionHandler:^(BOOL success) {
+            if (success) {
+                NSLog(@"open cameraSetting sucess");
+            }
+        }];
+    }else{
+        
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 @end

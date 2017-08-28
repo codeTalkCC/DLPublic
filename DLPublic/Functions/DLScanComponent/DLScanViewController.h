@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 typedef void(^QRResultBlock) (NSString *result);
 
 @class DLScanViewController;
@@ -23,4 +25,5 @@ typedef void(^QRResultBlock) (NSString *result);
 @property (nonatomic, copy) QRResultBlock resultBlock;
 @property (nonatomic, weak) id<DLScanViewControllerDelegate> delegate;
 
+NS_ASSUME_NONNULL_END
 @end

@@ -7,12 +7,17 @@
 //
 
 #import "DLAppDelegate.h"
+#import "DLViewController.h"
 
 @implementation DLAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    DLViewController *target = [[DLViewController alloc]init];
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:target];
+    self.window.rootViewController = nav;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

@@ -13,6 +13,7 @@ static NSString *T_DLDatePickerView = @"T_DLDatePickerView";
 static NSString *T_DLAddressPickerView = @"T_DLAddressPickerView";
 static NSString *T_DLNetworkUtil = @"T_DLNetworkUtil";
 static NSString *T_TextField = @"T_TextField";
+static NSString *T_Camera = @"T_Camera";
 
 @interface DLViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -25,7 +26,7 @@ static NSString *T_TextField = @"T_TextField";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _testArray = @[T_DLDatePickerView,T_DLAddressPickerView,T_DLNetworkUtil,T_TextField];
+    _testArray = @[T_DLDatePickerView,T_DLAddressPickerView,T_DLNetworkUtil,T_TextField,T_Camera];
     [self creatableView];
     self.view.backgroundColor = [UIColor blueColor];
 }
@@ -83,6 +84,9 @@ static NSString *T_TextField = @"T_TextField";
     if ([functionString isEqualToString:T_TextField]) {
         [self T_TextField_Action ];
     }
+    if ([functionString isEqualToString:T_Camera]) {
+        [self T_Camera_Action ];
+    }
 }
 
 
@@ -114,5 +118,10 @@ static NSString *T_TextField = @"T_TextField";
 
 - (void)T_TextField_Action{
     
+}
+
+- (void)T_Camera_Action{
+    DLScanViewController *targetVC = [[DLScanViewController alloc]init];
+    [self.navigationController pushViewController:targetVC animated:YES];
 }
 @end
