@@ -45,6 +45,7 @@ static const char * kQRCodeScanQueueName = "QRCodeScanQueueName";
     
     [self configureSubViews];
     
+    //灯光
     [self configureTorchButton];
     
     self.metaTypeArray = @[AVMetadataObjectTypeEAN13Code,
@@ -58,6 +59,7 @@ static const char * kQRCodeScanQueueName = "QRCodeScanQueueName";
     
 //    [self setup];
     [self startScan];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -97,27 +99,37 @@ static const char * kQRCodeScanQueueName = "QRCodeScanQueueName";
     
     // 提示标签
     UILabel *promptLabel  = [[UILabel alloc] init];
-    promptLabel.text      = @"将二维码放入取景框中即可自动扫描";
+    promptLabel.text      = [[NSBundle mainBundle] localizedStringForKey:@"将二维码放入取景框中即可自动扫描" value:nil table:@"Localizable"];
     promptLabel.font      = [UIFont systemFontOfSize:12.0];
     promptLabel.textColor = [UIColor whiteColor];
     promptLabel.textAlignment = NSTextAlignmentCenter;
     promptLabel.frame     = (CGRect){0, kDLSScreenHeight / 2 + kDLSScreenWith * kTransportScale / 2, kDLSScreenWith, 30};
     
     [_qrView addSubview:promptLabel];
+    
+    
+    
 }
 
+
+/**
+ 闪光灯按钮
+ */
 - (void)configureTorchButton
 {
     UIButton *torchBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    UIImage *closeImage = [UIImage imageNamed:@"dl_scan_torch_on"];
-    UIImage *openImage = [UIImage imageNamed:@"dl_scan_torch_off"];
-    CGRect frame        = torchBtn.frame;
-    frame.size          = openImage.size;
-    torchBtn.frame      = frame;
+    
+    NSBundle *bundle = [NSBundle bundleForClass:[DLScanViewController class]];
+    NSURL *url = [bundle URLForResource:@"DLPublic" withExtension:@"bundle"];
+    NSBundle *imageBundle = [NSBundle bundleWithURL:url];
+    
+    UIImage* openImage = [UIImage imageWithContentsOfFile:[imageBundle pathForResource:@"dl_scan_torch_on" ofType:@"png"]];
+    UIImage* closeImage = [UIImage imageWithContentsOfFile:[imageBundle pathForResource:@"dl_scan_torch_off" ofType:@"png"]];
+    torchBtn.frame      = CGRectMake(0, 0, 32, 32);
     [torchBtn setImage:closeImage forState:UIControlStateNormal];
     [torchBtn setImage:openImage forState:UIControlStateSelected];
     [torchBtn addTarget:self action:@selector(openTorchBtnOnTouched:) forControlEvents:UIControlEventTouchUpInside];
-    
+    torchBtn.backgroundColor = [UIColor clearColor];
     UIBarButtonItem *torchBtnItem = [[UIBarButtonItem alloc] initWithCustomView:torchBtn];
     self.navigationItem.rightBarButtonItem = torchBtnItem;
 }
