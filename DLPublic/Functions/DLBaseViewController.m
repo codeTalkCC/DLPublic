@@ -17,6 +17,7 @@
 
 @interface DLBaseViewController ()<DLKeyboardObserver>
 
+
 @end
 
 @implementation DLBaseViewController {
@@ -101,34 +102,50 @@
 - (void)keyboardChangedWithTransition:(DLKeyboardTransition)transition {
     UIWindow *keyboardWindow = [[DLKeyboardManager defaultManager] keyboardWindow];
     CGRect toFrame = [[DLKeyboardManager defaultManager] convertRect:transition.toFrame toView:keyboardWindow];
-    CGRect fromFrame = [[DLKeyboardManager defaultManager] convertRect:transition.fromFrame toView:keyboardWindow];
+//    CGRect fromFrame = [[DLKeyboardManager defaultManager] convertRect:transition.fromFrame toView:keyboardWindow];
     UIView *firstResponder = [self.view currentFirstResponder];
     if (firstResponder &&
         ([firstResponder isKindOfClass:[UITextField class]] ||
          [firstResponder isKindOfClass:[UITextView class]])) {
             BOOL willShow = [[DLKeyboardManager defaultManager] isKeyboardVisible];
             //firstResponder在整个view的位置
-            CGFloat locationBYInView = firstResponder.height;
+            CGFloat locationBYInView = firstResponder.height; //在整个view当中tf的底部距离顶端的距离
             UIView *resultView = firstResponder;
             do {
                 locationBYInView += resultView.top;
                 resultView = resultView.superview;
             } while (resultView != self.view && resultView != nil);
             
-            if (locationBYInView > CGRectGetMinY(toFrame) && willShow) {
-                [self adjustFirstResponderWithFrame:toFrame duration:transition.animationDuration];
-            } else if (fabs(firstResponder.bottom - CGRectGetMinY(fromFrame)) < fromFrame.size.height && !willShow){
-                [self adjustFirstResponderWithFrame:toFrame duration:transition.animationDuration];
+            if(willShow){
+                if (locationBYInView > CGRectGetMinY(toFrame)) {
+                    //使输入框不被遮挡
+                    CGFloat device = locationBYInView - CGRectGetMinY(toFrame) + 8;
+                    CGFloat buttomY = self.view.frame.size.height - device;
+                    [self adjustFirstResponderWithBy:buttomY duration:transition.animationDuration];
+                    
+                    //使界面底部不被遮挡
+//                    [self adjustFirstResponderWithFrame:toFrame duration:transition.animationDuration];
+                    
+                }
+            }else{
+                if (self.view.bottom < self.view.frame.size.height) {
+                    [self adjustFirstResponderWithFrame:toFrame duration:transition.animationDuration];
+                }
             }
     }
 }
 
 - (void)adjustFirstResponderWithFrame:(CGRect)toFrame duration:(NSTimeInterval)duration {
+    
+    [self adjustFirstResponderWithBy:CGRectGetMinY(toFrame) duration:duration];
+}
+
+- (void)adjustFirstResponderWithBy:(CGFloat)bottomY duration:(NSTimeInterval)duration {
     if (duration == 0) {
-        self.view.bottom = CGRectGetMinY(toFrame);
+        self.view.bottom = bottomY;
     } else {
         [UIView animateWithDuration:duration delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-            self.view.bottom = CGRectGetMinY(toFrame);
+            self.view.bottom = bottomY;
         } completion:nil];
     }
 }

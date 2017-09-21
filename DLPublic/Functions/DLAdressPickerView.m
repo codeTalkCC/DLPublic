@@ -349,9 +349,7 @@ static NSArray *provinceNameArray;          //为了记录顺序
         case 2:{
             NSArray *districtArray = [self districtArrayWithCity:_selectedCity andProvince:_selectedProvince];
             NSString *district = districtArray[row];
-            if ([district isEqualToString:_selectedDistrict]) {
-                _selectedDistrict = district;
-            }
+            _selectedDistrict = district;
         }
             break;
             

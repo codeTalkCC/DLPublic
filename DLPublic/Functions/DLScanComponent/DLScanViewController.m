@@ -106,9 +106,6 @@ static const char * kQRCodeScanQueueName = "QRCodeScanQueueName";
     promptLabel.frame     = (CGRect){0, kDLSScreenHeight / 2 + kDLSScreenWith * kTransportScale / 2, kDLSScreenWith, 30};
     
     [_qrView addSubview:promptLabel];
-    
-    
-    
 }
 
 
