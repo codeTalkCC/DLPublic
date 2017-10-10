@@ -117,20 +117,18 @@ static const char * kQRCodeScanQueueName = "QRCodeScanQueueName";
     UIButton *torchBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     
     NSBundle *bundle = [NSBundle bundleForClass:[DLScanViewController class]];
-    NSURL *url = [bundle URLForResource:@"DLPublicSource" withExtension:@"bundle"];
+    NSURL *url = [bundle URLForResource:@"DLPublic" withExtension:@"bundle"];
     NSBundle *imageBundle = [NSBundle bundleWithURL:url];
     
     UIImage* openImage = [UIImage imageWithContentsOfFile:[imageBundle pathForResource:@"dl_scan_torch_on" ofType:@"png"]];
     UIImage* closeImage = [UIImage imageWithContentsOfFile:[imageBundle pathForResource:@"dl_scan_torch_off" ofType:@"png"]];
-    torchBtn.frame      = CGRectMake(100, 22, 32, 32);
+    torchBtn.frame      = CGRectMake(0, 0, 32, 32);
     [torchBtn setImage:closeImage forState:UIControlStateNormal];
     [torchBtn setImage:openImage forState:UIControlStateSelected];
-    torchBtn.contentMode = UIViewContentModeCenter;
     [torchBtn addTarget:self action:@selector(openTorchBtnOnTouched:) forControlEvents:UIControlEventTouchUpInside];
     torchBtn.backgroundColor = [UIColor clearColor];
-    UIBarButtonItem *torchBtnItem = [[UIBarButtonItem alloc]initWithCustomView:torchBtn];
+    UIBarButtonItem *torchBtnItem = [[UIBarButtonItem alloc] initWithCustomView:torchBtn];
     self.navigationItem.rightBarButtonItem = torchBtnItem;
-    
 }
 
 #pragma mark - Setup
