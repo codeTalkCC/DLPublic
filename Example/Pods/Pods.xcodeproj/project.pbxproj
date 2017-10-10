@@ -20,10 +20,10 @@
 		241BA0FFE29BF468DD52BFE97581C751 /* UINavigationController+Public.h in Headers */ = {isa = PBXBuildFile; fileRef = FED63A0A30C0A93879B8A82EF8B475E5 /* UINavigationController+Public.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		25BEF7EBE061613CAA7BD7ABEE81789A /* DLLocalizableStandard.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC6FB77CA2A12A52102B9642DDD0F30 /* DLLocalizableStandard.m */; };
 		2A6AB244FEDECE3981FD7A0C48294A24 /* QRItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 12106DC83BCB01C58A3985D51A64B574 /* QRItem.m */; };
-		2B6D6D661F5934ED007AA197 /* DLPublic.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2B6D6D651F5934ED007AA197 /* DLPublic.bundle */; };
 		2B7DB552F2238D83FDE14F14772D113E /* NSString+Public.h in Headers */ = {isa = PBXBuildFile; fileRef = 521F9BFD34FFDB10DC9F7313C1D33DBA /* NSString+Public.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2B81656B1F04FEDC0081A882 /* DLNetworkUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B8165691F04FEDC0081A882 /* DLNetworkUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2B81656C1F04FEDC0081A882 /* DLNetworkUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B81656A1F04FEDC0081A882 /* DLNetworkUtil.m */; };
+		2B89AD081F8CA98C004DAC45 /* DLPublicSource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2B89AD071F8CA98B004DAC45 /* DLPublicSource.bundle */; };
 		2BA3FD76ACE22C6370C4F2FBC26E1056 /* NSNumber+Public.h in Headers */ = {isa = PBXBuildFile; fileRef = 067A95C06E3F0BF72B3BDB405F742993 /* NSNumber+Public.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2FB04A886EE5E857C52CDE0248DDCD0F /* UIDevice+Public.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BF2E6DBA89C9E6C871AC4B5ACEC682F /* UIDevice+Public.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2FD6522277390BF76D61B90B4742BAE2 /* UIAlertController+Public.m in Sources */ = {isa = PBXBuildFile; fileRef = 818DBCC3256C1612A6A4AF2167F716D8 /* UIAlertController+Public.m */; };
@@ -121,9 +121,9 @@
 		27A2A4BE2D98FF2FD7567924B4B38886 /* NSData+Public.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSData+Public.h"; sourceTree = "<group>"; };
 		292AFE66B984D5871F42DF67E55144E9 /* UIControl+Public.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIControl+Public.m"; sourceTree = "<group>"; };
 		29B92CA21E27C941F8E8385A2F54FDF5 /* DLPublic.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DLPublic.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		2B6D6D651F5934ED007AA197 /* DLPublic.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DLPublic.bundle; sourceTree = "<group>"; };
 		2B8165691F04FEDC0081A882 /* DLNetworkUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLNetworkUtil.h; sourceTree = "<group>"; };
 		2B81656A1F04FEDC0081A882 /* DLNetworkUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLNetworkUtil.m; sourceTree = "<group>"; };
+		2B89AD071F8CA98B004DAC45 /* DLPublicSource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DLPublicSource.bundle; sourceTree = "<group>"; };
 		341D0898820C80698EDFBD966BE22272 /* Pods-DLPublic_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DLPublic_Example-dummy.m"; sourceTree = "<group>"; };
 		392B377CDFB8EACED9E0A8307EE94F1F /* NSNumber+Public.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+Public.m"; sourceTree = "<group>"; };
 		3ACBFBCD8B15EB33874021BE4986EC2E /* DLDatePickerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DLDatePickerView.h; sourceTree = "<group>"; };
@@ -374,11 +374,11 @@
 		8C896719D8204891298D2EABB5880678 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				2B89AD071F8CA98B004DAC45 /* DLPublicSource.bundle */,
 				1E8FA558C61E829B17A9B6A3765ACBCB /* Address.plist */,
 				7969AEBE3C15F7D011C8AC40330AD01D /* errorCode_cn.xml */,
 				FC929B54664AA51E0E5C94CCC555D4A5 /* errorCode_en.xml */,
 				49F4E8AB7F8447D0F2BB524D146FE7D7 /* login_shot.png */,
-				2B6D6D651F5934ED007AA197 /* DLPublic.bundle */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -665,7 +665,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				664712C1527286AF43E8D71693115449 /* DLPublic.bundle in Resources */,
-				2B6D6D661F5934ED007AA197 /* DLPublic.bundle in Resources */,
+				2B89AD081F8CA98C004DAC45 /* DLPublicSource.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
