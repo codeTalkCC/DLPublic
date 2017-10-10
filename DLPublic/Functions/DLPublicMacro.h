@@ -71,7 +71,7 @@ static inline bool dl_dispatch_is_main_queue() {
 /**
  Submits a block for asynchronous execution on a background queue and returns immediately.
  */
-static inline void dl_dispatch_async_on_global_queue(void (^block)()) {
+static inline void dl_dispatch_async_on_global_queue(void (^block)(void)) {
     if (pthread_main_np()) {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), block);
     } else {
@@ -83,7 +83,7 @@ static inline void dl_dispatch_async_on_global_queue(void (^block)()) {
 /**
  Submits a block for asynchronous execution on a main queue and returns immediately.
  */
-static inline void dl_dispatch_async_on_main_queue(void (^block)()) {
+static inline void dl_dispatch_async_on_main_queue(void (^block)(void)) {
     if (pthread_main_np()) {
         block();
     } else {
@@ -94,7 +94,7 @@ static inline void dl_dispatch_async_on_main_queue(void (^block)()) {
 /**
  Submits a block for execution on a main queue and waits until the block completes.
  */
-static inline void dl_dispatch_sync_on_main_queue(void (^block)()) {
+static inline void dl_dispatch_sync_on_main_queue(void (^block)(void)) {
     if (pthread_main_np()) {
         block();
     } else {

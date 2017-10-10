@@ -126,7 +126,6 @@ static const CGFloat kAnimationDistance = 266;
     _datePicker = [UIDatePicker new];
     [_datePicker addTarget:self action:@selector(datePickerValueChanged:) forControlEvents:UIControlEventValueChanged];
     _datePicker.frame = (CGRect){0, 50, CGRectGetWidth(self.bounds), kDatePickerHeight};
-    _datePicker.locale = [NSLocale localeWithLocaleIdentifier:@"zh_CN"];
     _datePicker.datePickerMode = UIDatePickerModeDate;
     [contentView addSubview:_datePicker];
 }
