@@ -23,7 +23,8 @@
 		2B7DB552F2238D83FDE14F14772D113E /* NSString+Public.h in Headers */ = {isa = PBXBuildFile; fileRef = 521F9BFD34FFDB10DC9F7313C1D33DBA /* NSString+Public.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2B81656B1F04FEDC0081A882 /* DLNetworkUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B8165691F04FEDC0081A882 /* DLNetworkUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2B81656C1F04FEDC0081A882 /* DLNetworkUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B81656A1F04FEDC0081A882 /* DLNetworkUtil.m */; };
-		2B9A5FE11F8F0ADD00804A48 /* DLPublic.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2B9A5FE01F8F0ADC00804A48 /* DLPublic.bundle */; };
+		2B9A5FE41F8F144F00804A48 /* dl_scan_torch_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B9A5FE21F8F144F00804A48 /* dl_scan_torch_on.png */; };
+		2B9A5FE51F8F144F00804A48 /* dl_scan_torch_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B9A5FE31F8F144F00804A48 /* dl_scan_torch_off.png */; };
 		2BA3FD76ACE22C6370C4F2FBC26E1056 /* NSNumber+Public.h in Headers */ = {isa = PBXBuildFile; fileRef = 067A95C06E3F0BF72B3BDB405F742993 /* NSNumber+Public.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2FB04A886EE5E857C52CDE0248DDCD0F /* UIDevice+Public.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BF2E6DBA89C9E6C871AC4B5ACEC682F /* UIDevice+Public.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2FD6522277390BF76D61B90B4742BAE2 /* UIAlertController+Public.m in Sources */ = {isa = PBXBuildFile; fileRef = 818DBCC3256C1612A6A4AF2167F716D8 /* UIAlertController+Public.m */; };
@@ -123,7 +124,8 @@
 		29B92CA21E27C941F8E8385A2F54FDF5 /* DLPublic.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DLPublic.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B8165691F04FEDC0081A882 /* DLNetworkUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLNetworkUtil.h; sourceTree = "<group>"; };
 		2B81656A1F04FEDC0081A882 /* DLNetworkUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLNetworkUtil.m; sourceTree = "<group>"; };
-		2B9A5FE01F8F0ADC00804A48 /* DLPublic.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DLPublic.bundle; sourceTree = "<group>"; };
+		2B9A5FE21F8F144F00804A48 /* dl_scan_torch_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dl_scan_torch_on.png; sourceTree = "<group>"; };
+		2B9A5FE31F8F144F00804A48 /* dl_scan_torch_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dl_scan_torch_off.png; sourceTree = "<group>"; };
 		341D0898820C80698EDFBD966BE22272 /* Pods-DLPublic_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DLPublic_Example-dummy.m"; sourceTree = "<group>"; };
 		392B377CDFB8EACED9E0A8307EE94F1F /* NSNumber+Public.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+Public.m"; sourceTree = "<group>"; };
 		3ACBFBCD8B15EB33874021BE4986EC2E /* DLDatePickerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DLDatePickerView.h; sourceTree = "<group>"; };
@@ -374,7 +376,8 @@
 		8C896719D8204891298D2EABB5880678 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				2B9A5FE01F8F0ADC00804A48 /* DLPublic.bundle */,
+				2B9A5FE31F8F144F00804A48 /* dl_scan_torch_off.png */,
+				2B9A5FE21F8F144F00804A48 /* dl_scan_torch_on.png */,
 				1E8FA558C61E829B17A9B6A3765ACBCB /* Address.plist */,
 				7969AEBE3C15F7D011C8AC40330AD01D /* errorCode_cn.xml */,
 				FC929B54664AA51E0E5C94CCC555D4A5 /* errorCode_en.xml */,
@@ -664,7 +667,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B9A5FE11F8F0ADD00804A48 /* DLPublic.bundle in Resources */,
+				2B9A5FE41F8F144F00804A48 /* dl_scan_torch_on.png in Resources */,
+				2B9A5FE51F8F144F00804A48 /* dl_scan_torch_off.png in Resources */,
 				664712C1527286AF43E8D71693115449 /* DLPublic.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
