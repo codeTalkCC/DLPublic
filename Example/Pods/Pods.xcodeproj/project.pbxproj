@@ -21,7 +21,6 @@
 		1E91C0A97B597912742B7A0AA587C8AE /* NSData+Public.h in Headers */ = {isa = PBXBuildFile; fileRef = 51F6D8D0E2810E6C4904695C2C910020 /* NSData+Public.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1FF1E7A057CC48EE21844DE9824423D0 /* NSString+Public.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D570A4998A5C7098128DAEDE7FAAA8D /* NSString+Public.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		22EBF28421030D65E1044F9D8DF6E864 /* DLBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F061BF38C4261231D605E9576CEA628 /* DLBaseViewController.m */; };
-		266E5D08CA908FEC64757FD2438A2866 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 4184FE7B4CDFA279524D1F73B978C393 /* test.png */; };
 		2C5E5394BE082CD015590039C24E1711 /* DLTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = B1448CA26698A9DB5A57A17C1D0D1E2C /* DLTimer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DF1D115F5E1872E342B8A99E6BD0B2D /* DLPublic.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 29B92CA21E27C941F8E8385A2F54FDF5 /* DLPublic.bundle */; };
 		3348C6DA802E79C4D24A5834FCA642F1 /* NSNumber+Public.h in Headers */ = {isa = PBXBuildFile; fileRef = DEAE09DA0C57CDC77B2DEE92D59CD1A2 /* NSNumber+Public.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -113,18 +112,17 @@
 		1348DC2BAF4307AE98CD76FB16E26BCB /* Pods-DLPublic_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DLPublic_Tests-resources.sh"; sourceTree = "<group>"; };
 		15A257EB7F1D050A2D5E002FB9205EBA /* DLDatePickerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DLDatePickerView.m; sourceTree = "<group>"; };
 		1D8E452C30EA9BE70A0A307C89E18FB3 /* NSString+Public.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+Public.m"; sourceTree = "<group>"; };
-		1DAAEB36FEB78D972FD5C000D6F485FB /* Pods-DLPublic_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-DLPublic_Example.modulemap"; sourceTree = "<group>"; };
+		1DAAEB36FEB78D972FD5C000D6F485FB /* Pods-DLPublic_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-DLPublic_Example.modulemap"; sourceTree = "<group>"; };
 		1DCA5A66E882C25D150AEDA60C183F70 /* DLPublic-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DLPublic-umbrella.h"; sourceTree = "<group>"; };
 		205BA93396149AD407E70EF3F72B30FA /* DLPublic.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DLPublic.xcconfig; sourceTree = "<group>"; };
-		236B16BF07FE049B2BEF2964BE3B907D /* Pods_DLPublic_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DLPublic_Tests.framework; path = "Pods-DLPublic_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		236B16BF07FE049B2BEF2964BE3B907D /* Pods_DLPublic_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DLPublic_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2379CACE4F66411C8550F09DBD6180F7 /* NSNumber+Public.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+Public.m"; sourceTree = "<group>"; };
-		29B92CA21E27C941F8E8385A2F54FDF5 /* DLPublic.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = DLPublic.bundle; path = DLPublic.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		29B92CA21E27C941F8E8385A2F54FDF5 /* DLPublic.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DLPublic.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EE9A8A546475CCE1A2BE6055A17B670 /* UIDevice+Public.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Public.m"; sourceTree = "<group>"; };
 		307F9431EB2DBB7A83BEC26655B4C7CA /* NSDate+Public.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Public.m"; sourceTree = "<group>"; };
 		310E1B6CC6DA39F0909287B3FE2D394C /* UIAlertController+Public.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Public.m"; sourceTree = "<group>"; };
 		341D0898820C80698EDFBD966BE22272 /* Pods-DLPublic_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DLPublic_Example-dummy.m"; sourceTree = "<group>"; };
-		40F8A509669719763ED0A3CC159AE473 /* dl_light_on.png */ = {isa = PBXFileReference; includeInIndex = 1; path = dl_light_on.png; sourceTree = "<group>"; };
-		4184FE7B4CDFA279524D1F73B978C393 /* test.png */ = {isa = PBXFileReference; includeInIndex = 1; path = test.png; sourceTree = "<group>"; };
+		40F8A509669719763ED0A3CC159AE473 /* dl_light_on.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = dl_light_on.png; sourceTree = "<group>"; };
 		41E30637FA663775126B8ACFD53DA1C5 /* NSDictionary+Public.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Public.m"; sourceTree = "<group>"; };
 		46FD735819FA0D0688424B62D36F61B5 /* Pods-DLPublic_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DLPublic_Tests-umbrella.h"; sourceTree = "<group>"; };
 		47356414F5BAF3694D3385652542B4A4 /* Pods-DLPublic_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DLPublic_Tests-dummy.m"; sourceTree = "<group>"; };
@@ -151,10 +149,10 @@
 		7A47CBFE079F9F205D42C6F2660C59E3 /* DLPublic.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DLPublic.h; sourceTree = "<group>"; };
 		7C90DCC0CD0712184664E36E1E07FFDB /* DLScanViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DLScanViewController.h; sourceTree = "<group>"; };
 		81982C940067CC97871DBDC10B9A7415 /* Pods-DLPublic_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DLPublic_Example-umbrella.h"; sourceTree = "<group>"; };
-		8421E01E796773EC7852512123F6697E /* errorCode_en.xml */ = {isa = PBXFileReference; includeInIndex = 1; path = errorCode_en.xml; sourceTree = "<group>"; };
+		8421E01E796773EC7852512123F6697E /* errorCode_en.xml */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; path = errorCode_en.xml; sourceTree = "<group>"; };
 		91DFCC728FD677D29E14B951C9EFABCD /* NSData+Public.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSData+Public.m"; sourceTree = "<group>"; };
-		934419ECC35C26FD2357ED026C8D0A0D /* Pods_DLPublic_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DLPublic_Example.framework; path = "Pods-DLPublic_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		934419ECC35C26FD2357ED026C8D0A0D /* Pods_DLPublic_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DLPublic_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9433C38D1094033C1FB993FCBB6F29E3 /* Pods-DLPublic_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DLPublic_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		944E1E11BDDE627B3D90844FE365739E /* UINavigationController+Public.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Public.h"; sourceTree = "<group>"; };
 		9577A27CB694BF33117FD234B35DC6C9 /* DLKeyboardManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DLKeyboardManager.h; sourceTree = "<group>"; };
@@ -164,7 +162,7 @@
 		9BBCE7A6EA4B198C1A34238130F93F75 /* DLLocationManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DLLocationManager.h; sourceTree = "<group>"; };
 		9C01B69B9530F638D3D588EDA47FB289 /* DLDatePickerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DLDatePickerView.h; sourceTree = "<group>"; };
 		9D57B652CB5A2B5242AA8499B8D01E29 /* DLAdressPickerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DLAdressPickerView.h; sourceTree = "<group>"; };
-		9ED82D0D6EADF0F665C127DF116C0661 /* login_shot.png */ = {isa = PBXFileReference; includeInIndex = 1; path = login_shot.png; sourceTree = "<group>"; };
+		9ED82D0D6EADF0F665C127DF116C0661 /* login_shot.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = login_shot.png; sourceTree = "<group>"; };
 		A1ADE7DDBFD8A3D98A0E6291C9DDE985 /* UIApplication+Public.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+Public.m"; sourceTree = "<group>"; };
 		A27D5F2B8C1063334DBB74D2E533112B /* QRMenu.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = QRMenu.m; sourceTree = "<group>"; };
 		A5BB7C47173BDF251A3DD9160E20D7CF /* ResourceBundle-DLPublic-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-DLPublic-Info.plist"; sourceTree = "<group>"; };
@@ -176,20 +174,20 @@
 		B2EE2062716FB31A5A9D349CFC97C85A /* DLNetworkUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DLNetworkUtil.m; sourceTree = "<group>"; };
 		B8230585075325AEAB2F824F8DA0A094 /* UIResponder+Public.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+Public.m"; sourceTree = "<group>"; };
 		BA81C5D222E3F8B19F97629F73470443 /* UIControl+Public.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIControl+Public.h"; sourceTree = "<group>"; };
-		C01743448A2A7A5ADA66A348B1B15773 /* Pods-DLPublic_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-DLPublic_Tests.modulemap"; sourceTree = "<group>"; };
+		C01743448A2A7A5ADA66A348B1B15773 /* Pods-DLPublic_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-DLPublic_Tests.modulemap"; sourceTree = "<group>"; };
 		C0A47FC0C71B40FB59CDA2A0B647D94E /* DLPublicMacro.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DLPublicMacro.h; sourceTree = "<group>"; };
-		C2433981E8C1B4B515665D4D0365169F /* DLPublic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DLPublic.framework; path = DLPublic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2433981E8C1B4B515665D4D0365169F /* DLPublic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DLPublic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5F7AE061A46E126E79893B2B55F8665 /* UIColor+Public.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Public.m"; sourceTree = "<group>"; };
 		C6B91C1FE6ACD4CE849DC296A4833539 /* UIDevice+Public.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Public.h"; sourceTree = "<group>"; };
 		C85FC0F0325F0DEF6047F7BE887B74F9 /* DLErrorParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DLErrorParser.h; sourceTree = "<group>"; };
-		C974AA943FA82A0AF4182C64C5272494 /* dl_light_off.png */ = {isa = PBXFileReference; includeInIndex = 1; path = dl_light_off.png; sourceTree = "<group>"; };
+		C974AA943FA82A0AF4182C64C5272494 /* dl_light_off.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = dl_light_off.png; sourceTree = "<group>"; };
 		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		CD2FBE6C19ACA67C1A9539296830E752 /* errorCode_cn.xml */ = {isa = PBXFileReference; includeInIndex = 1; path = errorCode_cn.xml; sourceTree = "<group>"; };
+		CD2FBE6C19ACA67C1A9539296830E752 /* errorCode_cn.xml */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; path = errorCode_cn.xml; sourceTree = "<group>"; };
 		CEC69727E30EF639B6DBB6FBBFFBCF3C /* Address.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Address.plist; sourceTree = "<group>"; };
 		D96355972BA4A85DDAB949E231882D06 /* UIControl+Public.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIControl+Public.m"; sourceTree = "<group>"; };
 		DB0DD4CE40AE20B5572220E69978F69B /* UIImage+Public.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Public.m"; sourceTree = "<group>"; };
 		DD793BA284B670EE87C7149B99EF5F4A /* DLScanViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DLScanViewController.m; sourceTree = "<group>"; };
-		DE9D11056D206466079D5112395D8EC4 /* DLPublic.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = DLPublic.modulemap; sourceTree = "<group>"; };
+		DE9D11056D206466079D5112395D8EC4 /* DLPublic.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = DLPublic.modulemap; sourceTree = "<group>"; };
 		DEAE09DA0C57CDC77B2DEE92D59CD1A2 /* NSNumber+Public.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSNumber+Public.h"; sourceTree = "<group>"; };
 		E61DB671AF7456A5EA48932FC0586E83 /* DLLocationManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DLLocationManager.m; sourceTree = "<group>"; };
 		E71518025EB1F3363A67B3AEEE6E1B00 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -266,7 +264,6 @@
 			children = (
 				EBC951E7869EF8A1EB88914FCF701D61 /* Assets */,
 			);
-			name = DLPublic;
 			path = DLPublic;
 			sourceTree = "<group>";
 		};
@@ -323,7 +320,6 @@
 				F814B7F9E5CEDD7BF12CAA0FFEC8D182 /* Foundation */,
 				ABA2CC8693E6B88A35C5B73EC7815C98 /* UIKit */,
 			);
-			name = Category;
 			path = Category;
 			sourceTree = "<group>";
 		};
@@ -352,7 +348,6 @@
 				0E45361E3A5997E3CB2B299FB84E16E7 /* DLTimer.m */,
 				EAE72376BCC3626C58B25C637D54F723 /* DLScanComponent */,
 			);
-			name = Functions;
 			path = Functions;
 			sourceTree = "<group>";
 		};
@@ -378,7 +373,6 @@
 				6F1A1054BC3111B8CAEAF92D680501FA /* UIView+Public.h */,
 				78E4F2A231379E73D97723D1A3FF3414 /* UIView+Public.m */,
 			);
-			name = UIKit;
 			path = UIKit;
 			sourceTree = "<group>";
 		};
@@ -397,7 +391,6 @@
 				9248E3DAC83FC99219E6E0816BCDA439 /* Category */,
 				9F6AA0F442D1248F15C208106EBE2846 /* Functions */,
 			);
-			name = DLPublic;
 			path = DLPublic;
 			sourceTree = "<group>";
 		};
@@ -434,7 +427,6 @@
 				DD793BA284B670EE87C7149B99EF5F4A /* DLScanViewController.m */,
 				EB1287C93F87DA27B68BE3C35A29DF4E /* QRView */,
 			);
-			name = DLScanComponent;
 			path = DLScanComponent;
 			sourceTree = "<group>";
 		};
@@ -448,7 +440,6 @@
 				EC07B3A1454226B10DC6C125737E422B /* QRView.h */,
 				11E81F49E6E8A56988A5DAA4E775C538 /* QRView.m */,
 			);
-			name = QRView;
 			path = QRView;
 			sourceTree = "<group>";
 		};
@@ -461,9 +452,7 @@
 				CD2FBE6C19ACA67C1A9539296830E752 /* errorCode_cn.xml */,
 				8421E01E796773EC7852512123F6697E /* errorCode_en.xml */,
 				9ED82D0D6EADF0F665C127DF116C0661 /* login_shot.png */,
-				4184FE7B4CDFA279524D1F73B978C393 /* test.png */,
 			);
-			name = Assets;
 			path = Assets;
 			sourceTree = "<group>";
 		};
@@ -499,7 +488,6 @@
 				4D570A4998A5C7098128DAEDE7FAAA8D /* NSString+Public.h */,
 				1D8E452C30EA9BE70A0A307C89E18FB3 /* NSString+Public.m */,
 			);
-			name = Foundation;
 			path = Foundation;
 			sourceTree = "<group>";
 		};
@@ -674,7 +662,6 @@
 				DB4873EF3C2062F0FFC588D11163774B /* errorCode_cn.xml in Resources */,
 				6CB028C0F3303CFBDAC333846859BD9C /* errorCode_en.xml in Resources */,
 				D96D098F8791B245BDE9CECAA1D4D625 /* login_shot.png in Resources */,
-				266E5D08CA908FEC64757FD2438A2866 /* test.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -30,7 +30,9 @@ static const char * kQRCodeScanQueueName = "QRCodeScanQueueName";
 
 @property (nonatomic) UILabel *infoLabel; //提示信息label
 @property (nonatomic) UILabel *openCloseLabel; //开启关闭灯光label
-
+@property (nonatomic) UIImageView *openCloseImageView; //灯光开关的imageView
+@property (nonatomic) UIImage *closeImage;  //关闭照片
+@property (nonatomic) UIImage *openImage;   //开启照片
 @end
 
 @implementation DLScanViewController
@@ -115,23 +117,30 @@ static const char * kQRCodeScanQueueName = "QRCodeScanQueueName";
  */
 - (void)configureTorchButton
 {
-    UIButton *torchBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    
     
     NSBundle *bundle = [NSBundle bundleForClass:[DLScanViewController class]];
     NSURL *url = [bundle URLForResource:@"DLPublic" withExtension:@"bundle"];
     if (url) {
         NSBundle *imageBundle = [NSBundle bundleWithURL:url];
-        UIImage *openImage = [UIImage imageWithContentsOfFile:[imageBundle pathForResource:@"test" ofType:@"png"]];
-        UIImage *closeImage = [UIImage imageWithContentsOfFile:[imageBundle pathForResource:@"dl_light_off" ofType:@"png"]];
-        CGFloat y = CGRectGetMaxY(self.infoLabel.frame) + 8;
-        torchBtn.frame      = CGRectMake((kDLSScreenWith - 64) / 2, y, 64, 100);
+        self.openImage = [UIImage imageWithContentsOfFile:[imageBundle pathForResource:@"dl_light_on" ofType:@"png"]];
+        self.closeImage = [UIImage imageWithContentsOfFile:[imageBundle pathForResource:@"dl_light_off" ofType:@"png"]];
         
-        [torchBtn setBackgroundImage:closeImage forState:UIControlStateNormal];
-        [torchBtn setImage:openImage forState:UIControlStateSelected];
-        torchBtn.contentMode = UIViewContentModeTop;
-        [torchBtn addTarget:self action:@selector(openTorchBtnOnTouched:) forControlEvents:UIControlEventTouchUpInside];
-        torchBtn.backgroundColor = [UIColor clearColor];
-        [_qrView addSubview:torchBtn];
+        //容器button
+        UIButton *contentButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        CGFloat y = CGRectGetMaxY(self.infoLabel.frame) + 8;
+        contentButton.frame      = CGRectMake((kDLSScreenWith - 64) / 2, y, 64, 150);
+        contentButton.backgroundColor = [UIColor clearColor];
+        [contentButton addTarget:self action:@selector(openTorchBtnOnTouched:) forControlEvents:UIControlEventTouchUpInside];
+         [_qrView addSubview:contentButton];
+        
+        //图片button - 显示选中与非选中的图片
+        self.openCloseImageView = [[UIImageView alloc]init];
+        self.openCloseImageView.frame      = CGRectMake(0, 0, 64, 75);
+        self.openCloseImageView.image = self.closeImage;
+        self.openCloseImageView.contentMode = UIViewContentModeCenter;
+        self.openCloseImageView.backgroundColor = [UIColor clearColor];
+        [contentButton addSubview:self.openCloseImageView];
         
         // 提示标签打开 关闭
         UILabel *promptLabel  = [[UILabel alloc] init];
@@ -139,11 +148,11 @@ static const char * kQRCodeScanQueueName = "QRCodeScanQueueName";
         promptLabel.font      = [UIFont systemFontOfSize:12.0];
         promptLabel.textColor = [UIColor whiteColor];
         promptLabel.textAlignment = NSTextAlignmentCenter;
-        promptLabel.frame     = (CGRect){0, 75 + 8, kDLSScreenWith, 30};
+        promptLabel.frame     = (CGRect){0, 72, 166, 30};
         CGPoint center = promptLabel.center;
-        center.x = torchBtn.frame.size.width / 2;
+        center.x = contentButton.frame.size.width / 2;
         promptLabel.center = center;
-        [torchBtn addSubview:promptLabel];
+        [contentButton addSubview:promptLabel];
         self.openCloseLabel = promptLabel;
     }
 }
@@ -255,15 +264,18 @@ static const char * kQRCodeScanQueueName = "QRCodeScanQueueName";
 - (void)openTorchBtnOnTouched:(UIButton *)sender
 {
     sender.selected = !sender.selected;
+    
     AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     if ([device hasTorch]) {
         [device lockForConfiguration:nil];
         if (sender.selected) {
             [device setTorchMode:AVCaptureTorchModeOn];
-            self.openCloseLabel.text = [[NSBundle mainBundle] localizedStringForKey:@"轻触关闭" value:nil table:@"Localizable"];;
+            self.openCloseLabel.text = [[NSBundle mainBundle] localizedStringForKey:@"轻触关闭" value:nil table:@"Localizable"];
+            self.openCloseImageView.image = self.openImage;
         } else {
             [device setTorchMode:AVCaptureTorchModeOff];
-            self.openCloseLabel.text = [[NSBundle mainBundle] localizedStringForKey:@"轻触照亮" value:nil table:@"Localizable"];;
+            self.openCloseLabel.text = [[NSBundle mainBundle] localizedStringForKey:@"轻触照亮" value:nil table:@"Localizable"];
+            self.openCloseImageView.image = self.closeImage;
         }
         [device unlockForConfiguration];
     }
