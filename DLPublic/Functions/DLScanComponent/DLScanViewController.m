@@ -28,6 +28,9 @@ static const char * kQRCodeScanQueueName = "QRCodeScanQueueName";
 
 @property (nonatomic) QRView *qrView;
 
+@property (nonatomic) UILabel *infoLabel; //提示信息label
+@property (nonatomic) UILabel *openCloseLabel; //开启关闭灯光label
+
 @end
 
 @implementation DLScanViewController
@@ -90,22 +93,20 @@ static const char * kQRCodeScanQueueName = "QRCodeScanQueueName";
 {
     _qrView = [[QRView alloc] initWithFrame:CGRectMake(0, 0, kDLSScreenWith, kDLSScreenHeight)];
     _qrView.transparentArea = CGSizeMake(kDLSScreenWith * kTransportScale, kDLSScreenWith * kTransportScale);
-    
     _qrView.backgroundColor = [UIColor clearColor];
     _qrView.delegate = self;
-    
     [self.view addSubview:_qrView];
-    
     
     // 提示标签
     UILabel *promptLabel  = [[UILabel alloc] init];
-    promptLabel.text      = [[NSBundle mainBundle] localizedStringForKey:@"将二维码放入取景框中即可自动扫描" value:nil table:@"Localizable"];
+    promptLabel.text      = [[NSBundle mainBundle] localizedStringForKey:@"将二维码放入框中, 即可自动扫描" value:nil table:@"Localizable"];
     promptLabel.font      = [UIFont systemFontOfSize:12.0];
     promptLabel.textColor = [UIColor whiteColor];
     promptLabel.textAlignment = NSTextAlignmentCenter;
     promptLabel.frame     = (CGRect){0, kDLSScreenHeight / 2 + kDLSScreenWith * kTransportScale / 2, kDLSScreenWith, 30};
     
     [_qrView addSubview:promptLabel];
+    self.infoLabel = promptLabel;
 }
 
 
@@ -120,19 +121,31 @@ static const char * kQRCodeScanQueueName = "QRCodeScanQueueName";
     NSURL *url = [bundle URLForResource:@"DLPublic" withExtension:@"bundle"];
     if (url) {
         NSBundle *imageBundle = [NSBundle bundleWithURL:url];
-        UIImage* openImage = [UIImage imageWithContentsOfFile:[imageBundle pathForResource:@"dl_scan_torch_on" ofType:@"png"]];
-        UIImage* closeImage = [UIImage imageWithContentsOfFile:[imageBundle pathForResource:@"dl_scan_torch_off" ofType:@"png"]];
-        torchBtn.frame      = CGRectMake(100, 22, 32, 32);
-        [torchBtn setImage:closeImage forState:UIControlStateNormal];
+        UIImage *openImage = [UIImage imageWithContentsOfFile:[imageBundle pathForResource:@"dl_light_on" ofType:@"png"]];
+        UIImage *closeImage = [UIImage imageWithContentsOfFile:[imageBundle pathForResource:@"dl_light_off" ofType:@"png"]];
+        CGFloat y = CGRectGetMaxY(self.infoLabel.frame) + 8;
+        torchBtn.frame      = CGRectMake((kDLSScreenWith - 64) / 2, y, 64, 100);
+        
+        [torchBtn setBackgroundImage:closeImage forState:UIControlStateNormal];
         [torchBtn setImage:openImage forState:UIControlStateSelected];
-        torchBtn.contentMode = UIViewContentModeCenter;
+        torchBtn.contentMode = UIViewContentModeTop;
         [torchBtn addTarget:self action:@selector(openTorchBtnOnTouched:) forControlEvents:UIControlEventTouchUpInside];
         torchBtn.backgroundColor = [UIColor clearColor];
-        UIBarButtonItem *torchBtnItem = [[UIBarButtonItem alloc]initWithCustomView:torchBtn];
-        self.navigationItem.rightBarButtonItem = torchBtnItem;
+        [_qrView addSubview:torchBtn];
+        
+        // 提示标签打开 关闭
+        UILabel *promptLabel  = [[UILabel alloc] init];
+        promptLabel.text      = [[NSBundle mainBundle] localizedStringForKey:@"轻触照亮" value:nil table:@"Localizable"];
+        promptLabel.font      = [UIFont systemFontOfSize:12.0];
+        promptLabel.textColor = [UIColor whiteColor];
+        promptLabel.textAlignment = NSTextAlignmentCenter;
+        promptLabel.frame     = (CGRect){0, 75 + 8, kDLSScreenWith, 30};
+        CGPoint center = promptLabel.center;
+        center.x = torchBtn.frame.size.width / 2;
+        promptLabel.center = center;
+        [torchBtn addSubview:promptLabel];
+        self.openCloseLabel = promptLabel;
     }
-   
-    
 }
 
 #pragma mark - Setup
@@ -247,8 +260,10 @@ static const char * kQRCodeScanQueueName = "QRCodeScanQueueName";
         [device lockForConfiguration:nil];
         if (sender.selected) {
             [device setTorchMode:AVCaptureTorchModeOn];
+            self.openCloseLabel.text = [[NSBundle mainBundle] localizedStringForKey:@"轻触关闭" value:nil table:@"Localizable"];;
         } else {
             [device setTorchMode:AVCaptureTorchModeOff];
+            self.openCloseLabel.text = [[NSBundle mainBundle] localizedStringForKey:@"轻触照亮" value:nil table:@"Localizable"];;
         }
         [device unlockForConfiguration];
     }
