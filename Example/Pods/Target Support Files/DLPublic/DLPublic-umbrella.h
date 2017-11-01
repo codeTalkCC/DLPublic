@@ -32,6 +32,7 @@
 #import "DLKeyboardManager.h"
 #import "DLLocalizableStandard.h"
 #import "DLLocationManager.h"
+#import "DLNetworkUtil.h"
 #import "DLPublicMacro.h"
 #import "DLScanViewController.h"
 #import "QRItem.h"

@@ -1,9 +1,9 @@
 {
   "name": "DLPublic",
-  "version": "1.1.0",
+  "version": "1.1.6",
   "summary": "为了更好的开发与代码复用,把大多数项目经常用到的功能与文件整理进了DLPublic",
-  "description": "功能介绍:",
-  "homepage": "http://192.168.30.20:3020/xfjiang/DLPublic",
+  "description": "为了更好的开发与代码复用,把大多数项目经常用到的功能与文件整理进了DLPublic\n功能介绍:分类集合 与 功能集合",
+  "homepage": "https://github.com/codeTalkCC/DLPublic.git",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,8 +12,8 @@
     "xfjiang": "xfjiang@idelan.cn"
   },
   "source": {
-    "git": "http://192.168.30.20:3020/xfjiang/DLPublic.git",
-    "tag": "1.1.0"
+    "git": "https://github.com/codeTalkCC/DLPublic.git",
+    "tag": "1.1.6"
   },
   "platforms": {
     "ios": "8.0"

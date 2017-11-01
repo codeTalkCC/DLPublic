@@ -121,7 +121,7 @@ static const char * kQRCodeScanQueueName = "QRCodeScanQueueName";
     NSURL *url = [bundle URLForResource:@"DLPublic" withExtension:@"bundle"];
     if (url) {
         NSBundle *imageBundle = [NSBundle bundleWithURL:url];
-        UIImage *openImage = [UIImage imageWithContentsOfFile:[imageBundle pathForResource:@"dl_light_on" ofType:@"png"]];
+        UIImage *openImage = [UIImage imageWithContentsOfFile:[imageBundle pathForResource:@"test" ofType:@"png"]];
         UIImage *closeImage = [UIImage imageWithContentsOfFile:[imageBundle pathForResource:@"dl_light_off" ofType:@"png"]];
         CGFloat y = CGRectGetMaxY(self.infoLabel.frame) + 8;
         torchBtn.frame      = CGRectMake((kDLSScreenWith - 64) / 2, y, 64, 100);
