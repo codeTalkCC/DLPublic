@@ -138,7 +138,7 @@ static const char * kQRCodeScanQueueName = "QRCodeScanQueueName";
         self.openCloseImageView = [[UIImageView alloc]init];
         self.openCloseImageView.frame      = CGRectMake(0, 0, 64, 75);
         self.openCloseImageView.image = self.closeImage;
-        self.openCloseImageView.contentMode = UIViewContentModeCenter;
+        self.openCloseImageView.contentMode = UIViewContentModeScaleAspectFit;
         self.openCloseImageView.backgroundColor = [UIColor clearColor];
         [contentButton addSubview:self.openCloseImageView];
         
