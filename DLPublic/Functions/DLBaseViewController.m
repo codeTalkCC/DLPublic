@@ -26,11 +26,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    UIBarButtonItem *barItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:(UIBarButtonItemStylePlain) target:nil action:nil];
-    [barItem setTintColor:[UIColor whiteColor]];
-    self.navigationItem.backBarButtonItem = barItem;
-    
     //添加键盘的观察者
     [[DLKeyboardManager defaultManager]addObserver:self];
 }
