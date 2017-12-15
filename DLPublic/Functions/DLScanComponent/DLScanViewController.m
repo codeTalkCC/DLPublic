@@ -203,7 +203,7 @@ static const char * kQRCodeScanQueueName = "QRCodeScanQueueName";
     if (!_captureDeviceInput) {
         NSLog(@"无摄像头%@", [error localizedDescription]);
         //这这里进行出错处理
-        [self showAlertWithMessage:@"请先开启相机权限"];
+        [self showAlertWithMessage:[[NSBundle mainBundle]localizedStringForKey:@"请先开启相机权限" value:nil table:@"Localizable"]];
         return;
     }
 
@@ -342,7 +342,7 @@ static const char * kQRCodeScanQueueName = "QRCodeScanQueueName";
 - (void)showAlertWithMessage:(NSString *)message
 {
     NSString *msg = [NSString stringWithFormat:@"%@",message];
-    UIAlertView *alerterView = [[UIAlertView alloc] initWithTitle:@"提示" message:msg delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"去设置", nil];
+    UIAlertView *alerterView = [[UIAlertView alloc] initWithTitle:@"提示" message:msg delegate:self cancelButtonTitle:[[NSBundle mainBundle]localizedStringForKey:@"取消" value:nil table:@"Localizable"] otherButtonTitles:[[NSBundle mainBundle]localizedStringForKey:@"去设置" value:nil table:@"Localizable"], nil];
     alerterView.delegate = self;
     [alerterView show];
 }
